@@ -4,9 +4,14 @@ import { Avatar, Button, Card,Title} from 'react-native-paper';
 import CheckBox from 'react-native-check-box';
 import Plus from '../assets/Plus'
 import Check1 from '../assets/Check1';
-import Check2 from '../assets/check2'
+import Check2 from '../assets/check2';
+import {useNavigation} from '@react-navigation/native'
 
 function ThirdPageBody(){
+    const navigation:any=useNavigation();
+    const NavigateToNextPage=()=>{
+        navigation.navigate('FourthPage')
+    }
     const [isChecked,setisChecked]=useState(false);
     const [subcontractName, setSubcontractName] = useState('');
     const toggleisChecked=()=>{
@@ -21,7 +26,7 @@ function ThirdPageBody(){
                 </View>
                 <View style={style.divider1}></View> 
                 <View style={style.content1}>
-                <TouchableHighlight underlayColor="transparent" onPress={toggleisChecked}>
+                <TouchableHighlight underlayColor="transparent" onPress={NavigateToNextPage}>
                  <View style={style.Button}>
                     <Plus />
                    <Text style={style.bText}>Add locations</Text>

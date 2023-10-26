@@ -79,7 +79,7 @@ const style=StyleSheet.create({
         backgroundColor:'#FFF',
         marginLeft:'5%',
         marginTop:50,
-        width:'90%',
+        width:'88%',
         height:450
     },
     titleContainer: {
@@ -104,7 +104,7 @@ const style=StyleSheet.create({
     gifContainer:{
         //alignItems:'center',
         paddingTop:30,
-        paddingLeft:147,
+        paddingLeft:'43%',
         paddingRight:122
         
     },

@@ -2,6 +2,7 @@ import { StyleSheet,Text,View,Image} from 'react-native';
 import Home from './Screens/home';
 import SecondPage from './Screens/SecondPage';
 import ThirdPage from './Screens/ThirdPage';
+import FourthPage from './Screens/FourthPage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
@@ -55,6 +56,12 @@ function App(){
                   headerShadowVisible: false
                  }}
                  />
+                  <Stack.Screen name="FourthPage" component={FourthPage}
+                  options={{
+                    title:'Select Location'
+                  }}
+                  />
+                  
             </Stack.Navigator>
     </NavigationContainer>
   );
