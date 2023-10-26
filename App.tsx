@@ -3,6 +3,8 @@ import Home from './Screens/home';
 import SecondPage from './Screens/SecondPage';
 import ThirdPage from './Screens/ThirdPage';
 import FourthPage from './Screens/FourthPage';
+import FifthPage from './Screens/FifthPage';
+import SixthPage from './Screens/SixthPageBody';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
@@ -13,6 +15,13 @@ const customheader=()=>{
   return(
     <View>
       <Text style={style.headerRightContainer1}>1/3</Text>
+    </View>
+  )
+}
+const customheader2=()=>{
+  return(
+    <View>
+      <Text style={style.headerRightContainer1}>2/3</Text>
     </View>
   )
 }
@@ -60,6 +69,32 @@ function App(){
                   options={{
                     title:'Select Location'
                   }}
+                  />
+                  <Stack.Screen name="FifthPage" component={FifthPage}
+                   options={{
+                    title:'Create Subcontract',
+                    headerStyle: {
+                      backgroundColor: '#F3F5F9',
+                    },
+                    headerTitleStyle: {
+                      fontSize: 22,
+                    },
+                    headerRight:()=>customheader(),
+                    headerShadowVisible: false
+                   }}
+                  />
+                  <Stack.Screen name="SixthPage" component={SixthPage}
+                   options={{
+                    title:'Vendors',
+                    headerStyle: {
+                      backgroundColor: '#F3F5F9',
+                    },
+                    headerTitleStyle: {
+                      fontSize: 22,
+                    },
+                    headerRight:()=>customheader2(),
+                    headerShadowVisible: false
+                   }}
                   />
                   
             </Stack.Navigator>

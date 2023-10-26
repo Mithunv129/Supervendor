@@ -99,16 +99,16 @@ const styles = StyleSheet.create({
     width: 150,
     color: '#000',
     fontFamily: 'Manrope',
-    fontSize: 15,
+    fontSize: 16,
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 20,
-    paddingLeft:'6%',
+    paddingLeft:'5%',
     paddingTop:'1%'
 
   },
   Next:{
-    marginLeft:'5%',
+    marginLeft:'8%',
   },
 });
 export default BodyPage2;

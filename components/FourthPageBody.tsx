@@ -16,13 +16,13 @@ import {
 const DATA = [
   {
     id: 1,
-    title: 'StayFit Gyms     Downtown',
+    title: 'StayFit Gyms Downtown',
     description:'Downtown Atlanta',
     image:require('../assets/image1.png'),
   },
   {
     id: 2,
-    title: 'StayFit Sandy             Springs',
+    title: 'StayFit Sandy Springs',
     description:'Downtown Atlanta',
     image:require('../assets/image2.png'),
 
@@ -30,14 +30,14 @@ const DATA = [
   },
   {
     id: 3,
-    title: 'StayFit Fulton             County',
+    title: 'StayFit Fulton County',
     description:'Fulton County, GA',
     image:require('../assets/image3.png'),
 
   },
   {
     id:4,
-    title: 'Superior Path               Labs ',
+    title: 'Superior Path Labs ',
     description:'Fulton County',
     image:require('../assets/image4.png'),
 
@@ -45,7 +45,7 @@ const DATA = [
   },
   {
     id:5,
-    title: 'Superior Path               Labs ',
+    title: 'Superior Path Labs ',
     description:'Fulton County',
     image:require('../assets/image5.png'),
 
@@ -53,7 +53,7 @@ const DATA = [
   },
   {
     id: 6,
-    title: 'StayFit Fulton             County',
+    title: 'StayFit Fulton County',
     description:'Fulton County, GA',
     image:require('../assets/image6.png'),
 
@@ -61,13 +61,13 @@ const DATA = [
   },
   {
     id: 7,
-    title: 'StayFit Gyms     Downtown',
+    title: 'StayFit Gyms Downtown',
     description:'Downtown Atlanta',
     image:require('../assets/image1.png'),
   },
   {
     id: 8,
-    title: 'StayFit Sandy             Springs',
+    title: 'StayFit Sandy Springs',
     description:'Downtown Atlanta',
     image:require('../assets/image2.png'),
 
@@ -75,14 +75,14 @@ const DATA = [
   },
   {
     id: 9,
-    title: 'StayFit Fulton             County',
+    title: 'StayFit Fulton County',
     description:'Fulton County, GA',
     image:require('../assets/image3.png'),
 
   },
   {
     id:10,
-    title: 'Superior Path               Labs',
+    title: 'Superior Path Labs',
     description:'Fulton County',
     image:require('../assets/image4.png'),
 
@@ -90,7 +90,7 @@ const DATA = [
   },
   {
     id:11,
-    title: 'Superior Path               Labs ',
+    title: 'Superior Path Labs ',
     description:'Fulton County',
     image:require('../assets/image5.png'),
 
@@ -98,7 +98,7 @@ const DATA = [
   },
   {
     id: 12,
-    title: 'StayFit Fulton             County',
+    title: 'StayFit Fulton County',
     description:'Fulton County, GA',
     image:require('../assets/image6.png'),
 
@@ -158,8 +158,13 @@ const Item = ({ title, description, image,locations, setLocations }: ItemProps) 
 };
 
 const FourthPageBody= () => {
+  const navigation:any=useNavigation();
+  
     const [isTwoColumns, setIsTwoColumns] = useState(true);
     const [locations, setLocations] = useState<string[]>([]); 
+    const NavigateToNextPage=()=>{
+      navigation.navigate('FifthPage',{locations})
+  }
 
 
   return (
@@ -190,10 +195,11 @@ const FourthPageBody= () => {
           contentContainerStyle={styles.flatListContent}
       />
     )}
-    <View style={styles.button}>
-        <Text style={{fontSize:20}} >Add Location</Text>
+    <TouchableOpacity  onPress={NavigateToNextPage} style={styles.button}>
+                 <Text style={styles.buttontext}>Add locations</Text>
+     </TouchableOpacity>
 
-    </View>
+    
   </SafeAreaView>
   );
 };
@@ -212,7 +218,7 @@ const styles = StyleSheet.create({
   },
   item: {
     width: 175,
-    height: 122,
+    height: 125,
     backgroundColor: '#FFF',
     shadowColor: 'rgba(51, 102, 255, 0.12)', // Set the shadow color
     shadowOffset: { width: 0, height: 4 }, // Set the shadow offset
@@ -222,25 +228,23 @@ const styles = StyleSheet.create({
     marginBottom:'25%',
     borderWidth: 1,
     borderColor:"white"
-
-
-
   },
   title: {
     color: '#101840', // Text color
     textAlign: 'center', // Text alignment
     fontFamily: 'Manrope', // Font family (ensure you have the font loaded)
-    fontSize: 16, // Font size
+    fontSize: 17, // Font size
     fontStyle: 'normal', // Font style
     fontWeight: '400', // Font weight
     lineHeight: 20, // Line heig
-    marginTop:'5%'
+    marginTop:'5%',
+    
   },
   description:{
     color: 'rgba(16, 24, 64, 0.50)', // Text color with rgba
     textAlign: 'center', // Text alignment
     fontFamily: 'Manrope', // Font family (ensure you have the font loaded)
-    fontSize: 14, // Font size
+    fontSize: 15, // Font size
     fontStyle: 'normal', // Font style
     fontWeight: '400', // Font weight
     lineHeight: 20, // Line height
@@ -265,11 +269,14 @@ flatList: {
   },
   button:{
     backgroundColor:'#36F',
-    color:'white',
     padding:'5%',
     borderRadius:12,
+  },
+  buttontext:{
+    color:'white',
     textAlign:'center',
-    alignItems:'center'
+    alignItems:'center',
+    fontSize:20
   }
 });
 

@@ -5,18 +5,23 @@ import CheckBox from 'react-native-check-box';
 import Plus from '../assets/Plus'
 import Check1 from '../assets/Check1';
 import Check2 from '../assets/check2';
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation,useRoute} from '@react-navigation/native'
 
-function ThirdPageBody(){
+
+
+function FifthPageBody(){
     const navigation:any=useNavigation();
+    const route=useRoute();
     const NavigateToNextPage=()=>{
-        navigation.navigate('FourthPage')
-    }
+        navigation.navigate('SixthPage')
+    } 
+    const locations:[] = route.params?.locations || []; 
     const [isChecked,setisChecked]=useState(false);
     const [subcontractName, setSubcontractName] = useState('');
     const toggleisChecked=()=>{
         setisChecked(!isChecked);
     }
+    console.log(locations)
     return(
         <View style={style.container}>
             <View style={style.card}>
@@ -26,13 +31,19 @@ function ThirdPageBody(){
                 </View>
                 <View style={style.divider1}></View> 
                 <View style={style.content1}>
-                <TouchableHighlight underlayColor="transparent" onPress={NavigateToNextPage}>
-                 <View style={style.Button}>
-                    <Plus />
-                   <Text style={style.bText}>Add locations</Text>
-                 </View>
-                 </TouchableHighlight>
-                 <View>
+                    <Text style={style.content1Text}>Facilities</Text>
+                   <View style={style.locationsContainer}>
+                      {locations.length > 0 ? (
+                          locations.map((location, index) => (
+                             <View key={index}>
+                               <Text style={style.locationText}>{location}</Text>
+                             </View>
+                       ))
+                       ) : (
+                         <Text>No locations found</Text>
+                       )}
+                    </View>
+                <View>
                     <Text style={style.subcontract}>Subcontract name</Text>
                     <View style={style.subcontractText}>
                     <TextInput
@@ -43,6 +54,7 @@ function ThirdPageBody(){
                     </View>
                    
                  </View>
+                 
                </View> 
             </View>
             <View style={style.card1}>
@@ -52,7 +64,7 @@ function ThirdPageBody(){
                 </View>
             </View>
             <View style={style.ButtonView}>
-                <Button onPress={() => {}}
+                <Button onPress={NavigateToNextPage}
                     labelStyle={style.buttonLabel}
                 >
                     Continue
@@ -192,6 +204,27 @@ function ThirdPageBody(){
         fontWeight: '500',
         lineHeight: 24,
         letterSpacing: 0.15,
-    }
+    },
+    content1Text:{
+        color: '#474D66', // Set the color
+        fontFamily: 'Manrope', // Set the font family
+        fontSize: 16, // Set the font size
+        fontStyle: 'normal', // Set the font style
+        fontWeight: '400', // Set the font weight
+        lineHeight: 20, // Set the line height (you might need to adjust this)
+        letterSpacing: 0.4,
+    },
+    locationsContainer: {
+        marginTop: 10,
+      },
+    locationText: {
+        color: '#101840',
+        fontFamily: 'Manrope',
+        fontSize: 16,
+        fontStyle: 'normal',
+        fontWeight: '500',
+        lineHeight: 22,
+         letterSpacing: 0.25,
+    },
  })
-export default ThirdPageBody;
+export default FifthPageBody;
