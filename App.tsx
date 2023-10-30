@@ -6,6 +6,7 @@ import FourthPage from './Screens/FourthPage';
 import FifthPage from './Screens/FifthPage';
 import SixthPage from './Screens/SixthPageBody';
 import SeventhPage from './Screens/SeventhPage';
+import congratulationPage from './Screens/congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
@@ -127,6 +128,13 @@ function App() {
             },
             headerRight: () => customheader3(),
             headerShadowVisible: false,
+          }}
+        />
+        <Stack.Screen
+          name="congratulationPage"
+          component={congratulationPage}
+          options={{
+            headerShown: false, // Hide the header for the "home" screen
           }}
         />
       </Stack.Navigator>

@@ -22,7 +22,7 @@ import {Image} from 'react-native-svg';
 function SeventhPageBody() {
   const navigation: any = useNavigation();
   const NavigateToNextPage = () => {
-    navigation.navigate('FourthPage');
+    navigation.navigate('congratulationPage');
   };
   const [isChecked, setisChecked] = useState(false);
   const [subcontractName, setSubcontractName] = useState('');
@@ -141,7 +141,7 @@ function SeventhPageBody() {
           </Button>
         </View>
         <View style={style.Button2}>
-          <Button onPress={() => {}} labelStyle={style.openForBids}>
+          <Button onPress={NavigateToNextPage} labelStyle={style.openForBids}>
             open for bids
           </Button>
         </View>
