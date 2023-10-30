@@ -1,7 +1,7 @@
-import { StyleSheet,Text,View,Image} from 'react-native';
+import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Avatar, Button, Card} from 'react-native-paper';
-
+const { width, height } = Dimensions.get('window');
 function Body(){
     const navigation:any = useNavigation();
     const NavigateToNextPage=()=>{
@@ -76,10 +76,9 @@ function Body(){
 }
 const style=StyleSheet.create({
     card:{
-        backgroundColor:'#FFF',
         marginLeft:'5%',
-        marginTop:50,
-        width:'88%',
+        marginTop:height*0.06,
+        width:'88.8%',
         height:450
     },
     titleContainer: {
@@ -103,7 +102,7 @@ const style=StyleSheet.create({
     },
     gifContainer:{
         //alignItems:'center',
-        paddingTop:30,
+        paddingTop:height*0.04,
         paddingLeft:'43%',
         paddingRight:122
         
@@ -122,7 +121,7 @@ const style=StyleSheet.create({
     },
     textcontainer:{
         //alignItems:'center',
-        paddingLeft:61,
+        paddingLeft:width*0.17,
         paddingRight:61,
         paddingTop:18
     },
@@ -277,9 +276,10 @@ const style=StyleSheet.create({
     but:{
         flexDirection:'row',
         alignContent:'center',
-        width:136,
+        //width:"100%",
         display:'flex',
         paddingTop:20,
+        paddingRight:'0%',
 
     },
     but1:{

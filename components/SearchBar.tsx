@@ -1,7 +1,8 @@
-import { StyleSheet,Text,View,Image, TextInput,TouchableOpacity} from 'react-native';
+import { StyleSheet,Text,View,Image, TextInput,TouchableOpacity,Dimensions} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SvgComponent from '../assets/SvgImage';
 import { Input } from 'react-native-elements';
+const { width, height } = Dimensions.get('window');
 function Search(){
     return(
         <View style={style.container}>
@@ -20,8 +21,8 @@ const style=StyleSheet.create({
     container:{
         backgroundColor:'#FFFFFF',
         flex:1,
-        margin:10,
-        marginTop:65
+        margin:width*0.02,
+        marginTop:height*0.09
     },
     input:{
       borderRadius:14,

@@ -1,5 +1,6 @@
-import { StyleSheet,Text,View,Image} from 'react-native';
+import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
 import SvgComponent from '../assets/SvgImage'
+const { width, height } = Dimensions.get('window');
 
 function Homeheader(){
     return(
@@ -17,15 +18,13 @@ function Homeheader(){
 
 const style=StyleSheet.create({
   container1:{
-    //flex:1,
-    //flexDirection:'row',
-    
-    //alignItems: 'center'
+    marginTop:width*-0.04
+   
   },
     header:{
       flex:1,
-      marginLeft:20,
-      marginTop:35,
+      marginLeft: width * 0.04, 
+      marginTop: height * 0.07,
       flexDirection:'row',
       alignItems:'center',
       
@@ -62,7 +61,7 @@ const style=StyleSheet.create({
       elevation: 8, 
       borderRadius:30,
       alignItems:'center',
-      marginLeft:208
+      marginLeft:width*0.55
     }
 
 })
