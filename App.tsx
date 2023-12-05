@@ -1,32 +1,32 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
-import Home from './Screens/home';
-import SecondPage from './Screens/SecondPage';
-import ThirdPage from './Screens/ThirdPage';
-import FourthPage from './Screens/FourthPage';
-import FifthPage from './Screens/FifthPage';
-import SixthPage from './Screens/SixthPageBody';
-import SeventhPage from './Screens/SeventhPage';
-import congratulationPage from './Screens/congratulation';
+import HomePage from './Screens/HomePage';
+import Daily_Cleaning from './Screens/Daily_Cleaning';
+import Create_SubContract from './Screens/Create_SubContract';
+import Select_Location from './Screens/Select_Location';
+import SubContract_Details from './Screens/SubContract_Details';
+import Vendors from './Screens/Vendors';
+import SubContact_Summary from './Screens/SubContact_Summary';
+import Congratulation from './Screens/Congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
 
 const Stack = createNativeStackNavigator();
-const customheader = () => {
+const Create_Subcontract_Header = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>1/3</Text>
     </View>
   );
 };
-const customheader2 = () => {
+const Vendors_Header = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>2/3</Text>
     </View>
   );
 };
-const customheader3 = () => {
+const Subcontract_Summary_Header = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>3/3</Text>
@@ -38,15 +38,15 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="home"
-          component={Home}
+          name="Home"
+          component={HomePage}
           options={{
             headerShown: false, // Hide the header for the "home" screen
           }}
         />
         <Stack.Screen
-          name="SecondPage"
-          component={SecondPage}
+          name="Daily_Cleaning"
+          component={Daily_Cleaning}
           options={{
             title: 'Daily general clea...',
             headerStyle: {
@@ -64,8 +64,8 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="ThirdPage"
-          component={ThirdPage}
+          name="Create_SubContract"
+          component={Create_SubContract}
           options={{
             title: 'Create Subcontract',
             headerStyle: {
@@ -74,20 +74,20 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => customheader(),
+            headerRight: () => Create_Subcontract_Header(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
-          name="FourthPage"
-          component={FourthPage}
+          name="Select_Location"
+          component={Select_Location}
           options={{
             title: 'Select Location',
           }}
         />
         <Stack.Screen
-          name="FifthPage"
-          component={FifthPage}
+          name="SubContract_Details"
+          component={SubContract_Details}
           options={{
             title: 'Create Subcontract',
             headerStyle: {
@@ -96,13 +96,13 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => customheader(),
+            headerRight: () => Create_Subcontract_Header(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
-          name="SixthPage"
-          component={SixthPage}
+          name="Vendors"
+          component={Vendors}
           options={{
             title: 'Vendors',
             headerStyle: {
@@ -111,13 +111,13 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => customheader2(),
+            headerRight: () => Vendors_Header(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
-          name="SeventhPage"
-          component={SeventhPage}
+          name="SubContact_Summary"
+          component={SubContact_Summary}
           options={{
             title: 'Subcontract Summary',
             headerStyle: {
@@ -126,13 +126,13 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => customheader3(),
+            headerRight: () => Subcontract_Summary_Header(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
           name="congratulationPage"
-          component={congratulationPage}
+          component={Congratulation }
           options={{
             headerShown: false, // Hide the header for the "home" screen
           }}

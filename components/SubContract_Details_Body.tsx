@@ -20,7 +20,7 @@ function FifthPageBody() {
   const navigation: any = useNavigation();
   const route = useRoute();
   const NavigateToNextPage = () => {
-    navigation.navigate('SixthPage');
+    navigation.navigate('Vendors');
   };
   const locations: [] = route.params?.locations || [];
 

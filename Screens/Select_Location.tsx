@@ -1,15 +1,15 @@
 import {Text,View,StyleSheet} from 'react-native';
-import FourthPageHeader from '../components/FourthPageHeader';
-import FourthPageBody from '../components/FourthPageBody';
+import Select_Location_Header from '../components/Select_Location_Header';
+import Select_Location_Body from '../components/Select_Location_Body';
 
-function FourthPage(){
+function Select_Location(){
     return(
         <>
    <View style = {styles.header}>
-       <FourthPageHeader />
+       <Select_Location_Header />
    </View>
    <View style = {styles.body} >
-        <FourthPageBody/>
+        <Select_Location_Body/>
    </View>
   
    </>
@@ -31,4 +31,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default FourthPage;
+export default Select_Location;

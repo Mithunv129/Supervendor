@@ -156,7 +156,7 @@ const FourthPageBody = () => {
   const [isTwoColumns, setIsTwoColumns] = useState(true);
   const [locations, setLocations] = useState<string[]>([]);
   const NavigateToNextPage = () => {
-    navigation.navigate('FifthPage', {locations});
+    navigation.navigate('SubContract_Details', {locations});
   };
   //  const API_BASE_URL =  'https://b7a1-2409-40f2-1039-c12e-d1bf-8c78-2b9c-f87f.ngrok.io';
 

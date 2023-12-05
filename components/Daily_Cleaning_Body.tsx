@@ -31,7 +31,7 @@ const componentMap = {
 export function BodyPage2(): JSX.Element {
     const navigation:any=useNavigation();
     const NavigateToNextPage=()=>{
-        navigation.navigate('ThirdPage')
+        navigation.navigate('Create_SubContract')
     }
   const [actions, setAction] = useState([
     {name: 'SvgImageLock', text: 'Facility Access', key: '1'},

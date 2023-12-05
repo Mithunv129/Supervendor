@@ -10,7 +10,7 @@ import {useNavigation} from '@react-navigation/native'
 function ThirdPageBody(){
     const navigation:any=useNavigation();
     const NavigateToNextPage=()=>{
-        navigation.navigate('FourthPage')
+        navigation.navigate('Select_Location')
     }
     const [isChecked,setisChecked]=useState(false);
     const [subcontractName, setSubcontractName] = useState('');

@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('window');
 function Body(){
     const navigation:any = useNavigation();
     const NavigateToNextPage=()=>{
-        navigation.navigate('SecondPage')
+        navigation.navigate('Daily_Cleaning')
     }
     return(
         <Card style={style.card} >

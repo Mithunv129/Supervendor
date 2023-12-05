@@ -11,7 +11,7 @@ import {Avatar, Button, Card, Title} from 'react-native-paper';
 export function SixthPageBody(): JSX.Element {
   const navigation: any = useNavigation();
   const NavigateToNextPage = () => {
-    navigation.navigate('SeventhPage');
+    navigation.navigate('SubContact_Summary');
   };
   const [actions, setAction] = useState([
     {text: 'All available vendors', key: '1', borderColor: '#F3F5F9'},
