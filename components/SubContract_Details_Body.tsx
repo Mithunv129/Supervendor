@@ -60,7 +60,7 @@ function FifthPageBody() {
   }
   return (
     <KeyboardAvoidingView  behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={style.container}>
-    <ScrollView style={{ flexGrow: 1, backgroundColor:"black", display:"flex"}}>
+    <ScrollView style={{ flexGrow: 1, display:"flex",}}>
       <View style={style.card}>
         <View style={style.content}>
           <Check1 />
@@ -126,11 +126,12 @@ const style = StyleSheet.create({
     width: '92%',
     height: '47%',
     borderRadius: 10,
+    flexGrow:1.5
   },
   card1: {
     backgroundColor: '#FFF',
-    // margin: '4%',
-    // marginTop: '10%',
+    margin: '4%',
+    marginTop: '10%',
     width: '92%',
     height: '8%',
     borderRadius: 10,
@@ -168,7 +169,7 @@ const style = StyleSheet.create({
     paddingTop: '5%',
     paddingLeft: '4%',
     paddingRight: '4%',
-    backgroundColor:"yellow",
+    //backgroundColor:"yellow",
   },
   bText: {
     color: '#36F',
@@ -228,9 +229,11 @@ const style = StyleSheet.create({
     marginRight: '4%',
     backgroundColor: '#36F',
     borderRadius: 10,
-    marginTop: '52%',
-    //paddingTop: '2%',
+    paddingTop: '2%',
     paddingBottom: '2%',
+    marginTop:200,
+    marginBottom:'10%'
+    
   },
   buttonLabel: {
     color: 'white',
@@ -252,7 +255,7 @@ const style = StyleSheet.create({
   },
   locationsContainer: {
     marginTop: 10,
-    backgroundColor:"red"
+    //backgroundColor:"red"
   },
   locationText: {
     color: '#101840',
