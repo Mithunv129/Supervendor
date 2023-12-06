@@ -15,6 +15,8 @@ import Check1 from '../assets/Check1';
 import Check2 from '../assets/check2';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
+import { KeyboardAvoidingView } from 'react-native';
+import { Platform } from 'react-native';
 
 function FifthPageBody() {
   const navigation: any = useNavigation();
@@ -57,7 +59,8 @@ function FifthPageBody() {
     }
   }
   return (
-    <View style={style.container}>
+    <KeyboardAvoidingView  behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={style.container}>
+    <ScrollView style={{ flexGrow: 1, backgroundColor:"black", display:"flex"}}>
       <View style={style.card}>
         <View style={style.content}>
           <Check1 />
@@ -90,6 +93,7 @@ function FifthPageBody() {
           </View>
         </View>
       </View>
+      
       <View style={style.card1}>
         <View style={style.MultiCon}>
           <Check2 />
@@ -105,7 +109,8 @@ function FifthPageBody() {
           Continue
         </Button>
       </View>
-    </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 const style = StyleSheet.create({
@@ -124,11 +129,12 @@ const style = StyleSheet.create({
   },
   card1: {
     backgroundColor: '#FFF',
-    margin: '4%',
-    marginTop: '5%',
+    // margin: '4%',
+    // marginTop: '10%',
     width: '92%',
     height: '8%',
     borderRadius: 10,
+    
   },
 
   checkboxText: {
@@ -155,13 +161,14 @@ const style = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     flexDirection: 'row',
-    padding: '5%',
+    padding: '6%',
     borderColor: '#EEEEEE',
   },
   content1: {
     paddingTop: '5%',
     paddingLeft: '4%',
     paddingRight: '4%',
+    backgroundColor:"yellow",
   },
   bText: {
     color: '#36F',
@@ -222,7 +229,7 @@ const style = StyleSheet.create({
     backgroundColor: '#36F',
     borderRadius: 10,
     marginTop: '52%',
-    paddingTop: '2%',
+    //paddingTop: '2%',
     paddingBottom: '2%',
   },
   buttonLabel: {
@@ -245,6 +252,7 @@ const style = StyleSheet.create({
   },
   locationsContainer: {
     marginTop: 10,
+    backgroundColor:"red"
   },
   locationText: {
     color: '#101840',

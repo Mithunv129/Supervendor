@@ -20,7 +20,6 @@ export function SixthPageBody(): JSX.Element {
     {text: 'Invite vendors I know to ARK', key: '4', borderColor: '#F3F5F9'},
   ]);
   const handlePress = (key: string) => {
-    // Create a copy of the actions array
     const updatedActions = [...actions];
 
     // Find the selected item and update its borderColor

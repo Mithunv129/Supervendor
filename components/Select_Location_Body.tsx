@@ -1,5 +1,4 @@
-//part2.tsx
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -93,8 +92,10 @@ type ItemProps = {
   title: string;
   description: string;
   image: any;
-  locations: string[]; // Define locations as a prop
+  locations: string[]; 
   setLocations: (locations: string[]) => void;
+  count: number;
+  setCount: (count: number) => void;
 };
 
 // const Item = ({title , description,image}: ItemProps) => (
@@ -111,32 +112,22 @@ const Item = ({
   image,
   locations,
   setLocations,
+  count,
+  setCount
 }: ItemProps) => {
-  const [count, setCount] = useState(0);
-  // const [location , setLocations] = useState([])
-
-  const [borderColor, setBorderColor] = useState('#FFF'); // Initial border color
-  const navigation = useNavigation();
+  const [borderColor, setBorderColor] = useState('#FFF'); 
   const handlePress = () => {
-    // Change the border color when clicked
-    // setBorderColor('blue'); // Set your desired border color
-
-    if (borderColor === 'blue') {
+  if (borderColor === 'blue') {
       setBorderColor('#FFF');
       setCount(count - 1);
-      setLocations(locations.filter(loc => loc !== title)); // Remove the location from the array
+      setLocations(locations.filter(loc => loc !== title)); 
     } else {
       setBorderColor('blue');
       setCount(count + 1);
-      setLocations([...locations, title]); // Add the location to the array
+      setLocations([...locations, title]); 
     }
-    //navigation.navigate('Select Locations', { count });
   };
-  console.log(locations);
-  // function handleAddLocation(event: GestureResponderEvent): void {
-  //   throw new Error('Function not implemented.');
-  // }
-
+  console.log(count);
   return (
     <TouchableOpacity onPress={handlePress}>
       <View style={[styles.item, {borderColor}]}>
@@ -155,6 +146,7 @@ const FourthPageBody = () => {
 
   const [isTwoColumns, setIsTwoColumns] = useState(true);
   const [locations, setLocations] = useState<string[]>([]);
+  const [count, setCount] = useState(0);
   const NavigateToNextPage = () => {
     navigation.navigate('SubContract_Details', {locations});
   };
@@ -173,6 +165,12 @@ const FourthPageBody = () => {
   //       console.error('Error adding locations:', JSON.stringify(error));
   //     }
   //   }
+  useEffect(() => {
+    navigation.setOptions({
+      headerTitle: `Select Locations (${count})`,
+    });
+  }, [count,navigation]);
+
   return (
     <SafeAreaView style={styles.container}>
       {isTwoColumns ? (
@@ -185,6 +183,8 @@ const FourthPageBody = () => {
               image={item.image}
               locations={locations}
               setLocations={setLocations}
+              count={count}
+              setCount={setCount}               
             />
           )}
           keyExtractor={item => item.id.toString()}
@@ -202,6 +202,8 @@ const FourthPageBody = () => {
               image={item.image}
               locations={locations}
               setLocations={setLocations}
+              count={count}
+              setCount={setCount} 
             />
           )}
           keyExtractor={item => item.id.toString()}
@@ -220,7 +222,6 @@ const FourthPageBody = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //  marginTop: StatusBar.currentHeight || 0,
     marginTop: '-20%',
     padding: '5%',
     height: '100%',
@@ -233,9 +234,9 @@ const styles = StyleSheet.create({
     width: 175,
     height: 125,
     backgroundColor: '#FFF',
-    shadowColor: 'rgba(51, 102, 255, 0.12)', // Set the shadow color
-    shadowOffset: {width: 0, height: 4}, // Set the shadow offset
-    shadowOpacity: 1, // Set the shadow opacity (adjust the values as needed),
+    shadowColor: 'rgba(51, 102, 255, 0.12)', 
+    shadowOffset: {width: 0, height: 4}, 
+    shadowOpacity: 1, 
     borderRadius: 10,
     marginLeft: '3%',
     marginBottom: '25%',
@@ -243,23 +244,23 @@ const styles = StyleSheet.create({
     borderColor: 'white',
   },
   title: {
-    color: '#101840', // Text color
-    textAlign: 'center', // Text alignment
-    fontFamily: 'Manrope', // Font family (ensure you have the font loaded)
-    fontSize: 17, // Font size
-    fontStyle: 'normal', // Font style
-    fontWeight: '400', // Font weight
-    lineHeight: 20, // Line heig
+    color: '#101840', 
+    textAlign: 'center', 
+    fontFamily: 'Manrope', 
+    fontSize: 17,
+    fontStyle: 'normal', 
+    fontWeight: '400', 
+    lineHeight: 20, 
     marginTop: '5%',
   },
   description: {
-    color: 'rgba(16, 24, 64, 0.50)', // Text color with rgba
-    textAlign: 'center', // Text alignment
-    fontFamily: 'Manrope', // Font family (ensure you have the font loaded)
-    fontSize: 15, // Font size
-    fontStyle: 'normal', // Font style
-    fontWeight: '400', // Font weight
-    lineHeight: 20, // Line height
+    color: 'rgba(16, 24, 64, 0.50)', 
+    textAlign: 'center',
+    fontFamily: 'Manrope', 
+    fontSize: 15, 
+    fontStyle: 'normal', 
+    fontWeight: '400', 
+    lineHeight: 20, 
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: '5%',
@@ -276,7 +277,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   flatListContent: {
-    paddingVertical: 50, // Adjust the value to control the space between items
+    paddingVertical: 50, 
   },
   button: {
     backgroundColor: '#36F',
