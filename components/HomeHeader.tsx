@@ -2,7 +2,7 @@ import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
 import SvgComponent from '../assets/SvgImage'
 const { width, height } = Dimensions.get('window');
 
-function Homeheader(){
+function Home_Header(){
     return(
         <View style={style.container1}>
           <View style={style.header}>
@@ -65,5 +65,5 @@ const style=StyleSheet.create({
     }
 
 })
-export default Homeheader;
+export default Home_Header;
 

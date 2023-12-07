@@ -28,7 +28,7 @@ const componentMap = {
   // Add more components here if needed
 };
 
-export function BodyPage2(): JSX.Element {
+export function DailyCleaning(): JSX.Element {
     const navigation:any=useNavigation();
     const NavigateToNextPage=()=>{
         navigation.navigate('Create_SubContract')
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
     marginLeft:'8%',
   },
 });
-export default BodyPage2;
+export default DailyCleaning;

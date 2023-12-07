@@ -7,7 +7,7 @@ import Check1 from '../assets/Check1';
 import Check2 from '../assets/check2';
 import {useNavigation} from '@react-navigation/native'
 
-function ThirdPageBody(){
+function CreateSubContractBody(){
     const navigation:any=useNavigation();
     const NavigateToNextPage=()=>{
         navigation.navigate('Select_Location')
@@ -194,4 +194,4 @@ function ThirdPageBody(){
         letterSpacing: 0.15,
     }
  })
-export default ThirdPageBody;
+export default CreateSubContractBody;

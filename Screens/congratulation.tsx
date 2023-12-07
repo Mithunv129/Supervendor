@@ -1,6 +1,6 @@
 import { StyleSheet,Text,View,Image} from 'react-native';
 import CongratulationBody from '../components/CongratulationBody';
-function congratulationPage(){
+function CongratulationPage(){
     return(
         <View>
             <CongratulationBody/>
@@ -8,4 +8,4 @@ function congratulationPage(){
     )
 }
 
-export default congratulationPage;
+export default CongratulationPage;

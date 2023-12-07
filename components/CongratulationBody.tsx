@@ -1,7 +1,7 @@
 import { JSXElementConstructor } from 'react';
 import {Text,StyleSheet,View} from 'react-native'
 
-function congratulationBody(){
+function CongratulationBody(){
     return(
       <View style={style.textview}>
         <Text style={style.text}>Congratulations😊😊</Text>
@@ -24,4 +24,4 @@ const style=StyleSheet.create({
   }
 )
 
-export default congratulationBody;
+export default CongratulationBody;

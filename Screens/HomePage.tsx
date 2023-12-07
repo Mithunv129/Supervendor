@@ -1,13 +1,13 @@
 import { StyleSheet,Text,View,Image} from 'react-native';
-import Home_Header from '../components/Home_Header';
+import HomeHeader from '../components/HomeHeader';
 import SearchBar from '../components/SearchBar';
-import Home_Body from '../components/Home_Body'
+import HomeBody from '../components/HomeBody'
 function Home(){
     return(
         <View>
-          <Home_Header/>
+          <HomeHeader/>
           <SearchBar/>
-          <Home_Body/>
+          <HomeBody/>
         </View>
     )
 }

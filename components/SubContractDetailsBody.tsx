@@ -18,7 +18,7 @@ import axios from 'axios';
 import { KeyboardAvoidingView } from 'react-native';
 import { Platform } from 'react-native';
 
-function FifthPageBody() {
+function SubContract_Details_Body() {
   const navigation: any = useNavigation();
   const route = useRoute();
   const NavigateToNextPage = () => {
@@ -39,7 +39,7 @@ function FifthPageBody() {
   };
   console.log(subcontractName);
   const API_BASE_URL =
-    'https://2bf3-2409-40f2-1004-70ff-8d37-b592-1b1f-f8bf.ngrok.io';
+    'https://b2d2-122-186-163-190.ngrok.io';
 
   axios.defaults.baseURL = API_BASE_URL;
   async function handleAddLocation() {
@@ -267,4 +267,4 @@ const style = StyleSheet.create({
     letterSpacing: 0.25,
   },
 });
-export default FifthPageBody;
+export default SubContract_Details_Body;

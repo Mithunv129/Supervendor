@@ -1,9 +1,9 @@
 import { StyleSheet,Text,View,Image} from 'react-native';
-import Vendors_Body from '../components/Vendors_Body';
+import VendorsBody from '../components/VendorsBody';
 function Vendors(){
     return(
         <View>
-            <Vendors_Body/>
+            <VendorsBody/>
         </View>
     )
 }

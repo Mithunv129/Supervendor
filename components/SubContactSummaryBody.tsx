@@ -19,7 +19,7 @@ import {useNavigation} from '@react-navigation/native';
 import axios from 'axios';
 import {Image} from 'react-native-svg';
 
-function SeventhPageBody() {
+function SubContact_Summary_Body() {
   const navigation: any = useNavigation();
   const NavigateToNextPage = () => {
     navigation.navigate('congratulationPage');
@@ -32,8 +32,7 @@ function SeventhPageBody() {
   const [fetchedData, setFetchedData] = useState([]); // Store the fetched data
   const [lastElements, setLastElements] = useState([]); // Store the fetched last elements as an array
 
-  const apiUrl =
-    'https://2bf3-2409-40f2-1004-70ff-8d37-b592-1b1f-f8bf.ngrok.io/users';
+  const apiUrl = 'https://b2d2-122-186-163-190.ngrok.io/users';
 
   useEffect(() => {
     // Function to fetch data from the API
@@ -77,26 +76,10 @@ function SeventhPageBody() {
         <View style={style.content1}>
           <Text style={style.facilitiestext}>Facilities</Text>
           <View style={style.facilitiesContainer}>
-            {/* {fetchedData.length > 0 ? (
-              fetchedData.map((data, index) => (
-                <View key={index}>
-                  <Text style={style.locationText}>{data}</Text>
-                </View>
-              ))
-            ) : (
-              <Text>No locations found</Text>
-            )} */}
-
             {
-              // lastElement.length > 0 ? (
-              //   lastElement.map((data:any, index:any) => (
-              //     <View key={index}>
-              //       <Text style={style.locationText}>{data}</Text>
-              //     </View>
-              //   ))
-              // ) : (
-              //   <Text>No locations found</Text>
-              // )
+
+            }
+            {
               lastElement.length > 0 ? (
                 lastElement.map((data, index) => (
                   <View key={index}>
@@ -163,7 +146,7 @@ const style = StyleSheet.create({
     margin: '4%',
     marginTop: '5%',
     width: '92%',
-    height: '47%',
+    height: '38%',
     borderRadius: 10,
   },
   selectVendorsView: {
@@ -291,7 +274,7 @@ const style = StyleSheet.create({
   ButtonView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingBottom: '23%',
+    paddingBottom: '4%',
     flex: 0.9,
     display: 'flex',
     alignItems: 'center',
@@ -339,4 +322,4 @@ const style = StyleSheet.create({
     paddingBottom: '2%',
   },
 });
-export default SeventhPageBody;
+export default SubContact_Summary_Body;

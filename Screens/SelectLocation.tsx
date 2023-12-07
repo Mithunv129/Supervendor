@@ -1,15 +1,15 @@
 import {Text,View,StyleSheet} from 'react-native';
-import Select_Location_Header from '../components/Select_Location_Header';
-import Select_Location_Body from '../components/Select_Location_Body';
+import SelectLocationHeader from '../components/SelectLocationHeader';
+import SelectLocationBody from '../components/SelectLocationBody';
 
-function Select_Location(){
+function SelectLocation(){
     return(
         <>
    <View style = {styles.header}>
-       <Select_Location_Header />
+       <SelectLocationHeader />
    </View>
    <View style = {styles.body} >
-        <Select_Location_Body/>
+        <SelectLocationBody/>
    </View>
   
    </>
@@ -31,4 +31,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default Select_Location;
+export default SelectLocation;

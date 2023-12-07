@@ -141,7 +141,7 @@ const Item = ({
   );
 };
 
-const FourthPageBody = () => {
+const Select_Location_Body = () => {
   const navigation: any = useNavigation();
 
   const [isTwoColumns, setIsTwoColumns] = useState(true);
@@ -292,4 +292,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FourthPageBody;
+export default Select_Location_Body;

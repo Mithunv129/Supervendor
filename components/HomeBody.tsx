@@ -2,7 +2,7 @@ import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Avatar, Button, Card} from 'react-native-paper';
 const { width, height } = Dimensions.get('window');
-function Body(){
+function Home_Body(){
     const navigation:any = useNavigation();
     const NavigateToNextPage=()=>{
         navigation.navigate('Daily_Cleaning')
@@ -317,4 +317,4 @@ const style=StyleSheet.create({
         fontSize:14,
     }
 })
-export default Body;
+export default Home_Body;

@@ -1,32 +1,32 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import HomePage from './Screens/HomePage';
-import Daily_Cleaning from './Screens/Daily_Cleaning';
-import Create_SubContract from './Screens/Create_SubContract';
-import Select_Location from './Screens/Select_Location';
-import SubContract_Details from './Screens/SubContract_Details';
+import DailyCleaning from './Screens/DailyCleaning';
+import CreateSubContract from './Screens/CreateSubContract';
+import SelectLocation from './Screens/SelectLocation';
+import SubContractDetails from './Screens/SubContractDetails';
 import Vendors from './Screens/Vendors';
-import SubContact_Summary from './Screens/SubContact_Summary';
+import SubContactSummary from './Screens/SubContactSummary';
 import Congratulation from './Screens/Congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
 
 const Stack = createNativeStackNavigator();
-const Create_Subcontract_Header = () => {
+const CreateSubcontractHeader = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>1/3</Text>
     </View>
   );
 };
-const Vendors_Header = () => {
+const VendorsHeader = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>2/3</Text>
     </View>
   );
 };
-const Subcontract_Summary_Header = () => {
+const SubcontractSummaryHeader = () => {
   return (
     <View>
       <Text style={style.headerRightContainer1}>3/3</Text>
@@ -46,7 +46,7 @@ function App() {
         />
         <Stack.Screen
           name="Daily_Cleaning"
-          component={Daily_Cleaning}
+          component={DailyCleaning}
           options={{
             title: 'Daily general clea...',
             headerStyle: {
@@ -65,7 +65,7 @@ function App() {
         />
         <Stack.Screen
           name="Create_SubContract"
-          component={Create_SubContract}
+          component={CreateSubContract}
           options={{
             title: 'Create Subcontract',
             headerStyle: {
@@ -74,20 +74,20 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => Create_Subcontract_Header(),
+            headerRight: () => CreateSubcontractHeader(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
           name="Select_Location"
-          component={Select_Location}
+          component={SelectLocation}
           options={{
             title: 'Select Location',
           }}
         />
         <Stack.Screen
           name="SubContract_Details"
-          component={SubContract_Details}
+          component={SubContractDetails}
           options={{
             title: 'Create Subcontract',
             headerStyle: {
@@ -96,7 +96,7 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => Create_Subcontract_Header(),
+            headerRight: () => CreateSubcontractHeader(),
             headerShadowVisible: false,
           }}
         />
@@ -111,13 +111,13 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => Vendors_Header(),
+            headerRight: () => VendorsHeader(),
             headerShadowVisible: false,
           }}
         />
         <Stack.Screen
           name="SubContact_Summary"
-          component={SubContact_Summary}
+          component={SubContactSummary}
           options={{
             title: 'Subcontract Summary',
             headerStyle: {
@@ -126,7 +126,7 @@ function App() {
             headerTitleStyle: {
               fontSize: 22,
             },
-            headerRight: () => Subcontract_Summary_Header(),
+            headerRight: () => SubcontractSummaryHeader(),
             headerShadowVisible: false,
           }}
         />

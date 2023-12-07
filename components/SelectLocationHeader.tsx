@@ -4,7 +4,7 @@ import { Input } from 'react-native-elements';
 
 
 
-function FourthPageHeader() {
+function Select_Location_Header() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Which location would you like to subcontract to other vendors </Text>
@@ -56,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default  FourthPageHeader ;
+export default  Select_Location_Header ;

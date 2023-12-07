@@ -8,7 +8,7 @@ import SvgNote from '../assets/SvgNote';
 import SvgNote2 from '../assets/SvgNote';
 import {useNavigation} from '@react-navigation/native';
 import {Avatar, Button, Card, Title} from 'react-native-paper';
-export function SixthPageBody(): JSX.Element {
+export function Vendors_Body(): JSX.Element {
   const navigation: any = useNavigation();
   const NavigateToNextPage = () => {
     navigation.navigate('SubContact_Summary');
@@ -161,4 +161,4 @@ const styles = StyleSheet.create({
     paddingBottom: '2%',
   },
 });
-export default SixthPageBody;
+export default Vendors_Body;
