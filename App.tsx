@@ -148,7 +148,7 @@ const style = StyleSheet.create({
     backgroundColor: '#F3F5F9',
   },
   headerRightContainer: {
-    marginRight: '4%',
+    marginRight: '3%',
     marginTop: '3%',
   },
   headerRightContainer1: {

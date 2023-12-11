@@ -76,9 +76,12 @@ function Home_Body(){
 }
 const style=StyleSheet.create({
     card:{
-        marginLeft:'5%',
+         marginLeft:'5%',
+         paddingLeft:'1.8%',
         marginTop:height*0.06,
-        width:'88.8%',
+        width:'86.9%',
+        alignItems:"center",
+        
         height:450
     },
     titleContainer: {
@@ -141,6 +144,9 @@ const style=StyleSheet.create({
     },
     divider:{
         paddingTop:17,
+        marginLeft:'-1.6%',
+        marginRight:'0.5%',
+
         borderBottomWidth:2,
         borderBottomColor:'#EEE'
     },
@@ -251,10 +257,12 @@ const style=StyleSheet.create({
      divider1:{
         paddingTop:15,
         borderBottomWidth:2,
+        marginLeft:'-1.6%',
+        marginRight:'0.5%',
         borderBottomColor:'#EEE',
     },
     bidcontainer:{
-        paddingLeft:72,
+        paddingLeft:82,
         paddingTop:10,
         flexDirection:'row',
     },

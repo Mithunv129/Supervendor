@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     paddingRight:'8%'
   },
   Text:{
-    width: 150,
+    width: 200,
     color: '#000',
     fontFamily: 'Manrope',
     fontSize: 16,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     lineHeight: 20,
     paddingLeft:'5%',
-    paddingTop:'1%'
+    paddingTop:'1.6%'
 
   },
   Next:{

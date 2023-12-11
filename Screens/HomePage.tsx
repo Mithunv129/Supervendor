@@ -4,12 +4,18 @@ import SearchBar from '../components/SearchBar';
 import HomeBody from '../components/HomeBody'
 function Home(){
     return(
-        <View>
+        <View style={style.homecontainer}>
           <HomeHeader/>
           <SearchBar/>
           <HomeBody/>
         </View>
     )
 }
+const style = StyleSheet.create({
+  homecontainer:{
+    paddingLeft:9.5
+
+  }
+})
 
 export default Home;
