@@ -32,7 +32,7 @@ function SubContact_Summary_Body() {
   const [fetchedData, setFetchedData] = useState([]); // Store the fetched data
   const [lastElements, setLastElements] = useState([]); // Store the fetched last elements as an array
 
-  const apiUrl = 'https://1c26-122-186-163-190.ngrok.io/users';
+  const apiUrl = 'https://2f83-122-186-163-190.ngrok.io/users';
 
   useEffect(() => {
     // Function to fetch data from the API

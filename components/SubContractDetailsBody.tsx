@@ -39,7 +39,7 @@ function SubContract_Details_Body() {
   };
   console.log(subcontractName);
   const API_BASE_URL =
-    'https://1c26-122-186-163-190.ngrok.io';
+    'https://2f83-122-186-163-190.ngrok.io';
 
   axios.defaults.baseURL = API_BASE_URL;
   async function handleAddLocation() {

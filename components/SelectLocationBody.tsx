@@ -98,14 +98,6 @@ type ItemProps = {
   setCount: (count: number) => void;
 };
 
-// const Item = ({title , description,image}: ItemProps) => (
-//   <View style={styles.item}>
-//     <Image source={image}  style={styles.image} />
-//     <Text style={styles.title } numberOfLines={2}>{title}</Text>
-//     <Text style={styles.description}>{description}</Text>
-
-//   </View>
-// );
 const Item = ({
   title,
   description,

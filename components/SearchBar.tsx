@@ -9,7 +9,7 @@ function Search() {
   return (
     <View style={style.container}>
       <Input
-        placeholder="Search..."
+        placeholder="Search"
         rightIcon={
           <SearchImage style={style.search} />
         }

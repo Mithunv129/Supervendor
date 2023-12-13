@@ -26,10 +26,12 @@ const style = StyleSheet.create({
     marginTop: height * 0.07,
     flexDirection: 'row',
     alignItems: 'center',
+    paddingLeft:5,
   },
   image: {
     width: 36,
     height: 24,
+    //marginLeft:3
   },
   container: {
     width: 56,
@@ -38,10 +40,11 @@ const style = StyleSheet.create({
     marginLeft: 5,
     fontFamily: 'Futura PT',
     fontSize: 24,
-    fontWeight: '500',
+    fontWeight: '800',
     fontStyle: 'normal',
     lineHeight: 28,
     letterSpacing: 0.15,
+    paddingTop:2
   },
   bell: {
     width: 23,
@@ -57,7 +60,8 @@ const style = StyleSheet.create({
     elevation: 8,
     borderRadius: 30,
     alignItems: 'center',
-    marginLeft: width * 0.52,
+    marginLeft: width * 0.522
+    ,
   },
 });
 export default Home_Header;

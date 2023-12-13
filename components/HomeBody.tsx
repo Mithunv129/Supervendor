@@ -1,6 +1,7 @@
 import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Avatar, Button, Card} from 'react-native-paper';
+import ShareButton from '../assets/ShareButton'
 const { width, height } = Dimensions.get('window');
 function Home_Body(){
     const navigation:any = useNavigation();
@@ -15,11 +16,12 @@ function Home_Body(){
                 }
                 style={style.titleContainer}
             />
+            <ShareButton style={style.share}/>
             <View style={style.gifContainer}>
                     <Image source={require('../assets/celebrategif.png')} style={style.gif} />
                 </View>
-            <Card.Content>
-                <View style={style.textcontainer}>
+            <Card.Content >
+                <View style={style.textcontainer1}>
                     <Text style={style.daily}>Daily general cleaning at</Text>
                 </View>
                 <View style={style.textlocation}>
@@ -28,7 +30,7 @@ function Home_Body(){
 
             </Card.Content>
             <View style={style.divider}></View>  
-            <Card.Content>
+            <Card.Content >
                 <View style={style.date}>
                     <Text style={style.startd}>Start Date</Text>
                     <Text style={style.starte}>End Date</Text>
@@ -76,11 +78,13 @@ function Home_Body(){
 }
 const style=StyleSheet.create({
     card:{
+        backgroundColor:"white",
          marginLeft:'5%',
          paddingLeft:'1.8%',
         marginTop:height*0.06,
         width:'86.9%',
         alignItems:"center",
+        justifyContent:"center",
         
         height:450
     },
@@ -93,11 +97,11 @@ const style=StyleSheet.create({
         color: '#1CA49C',      
         textAlign:'center',
         fontFamily: 'Manrope', 
-        fontSize: 16,          
+        fontSize: 18,          
         fontStyle: 'normal',  
-        fontWeight: '700',   
+        fontWeight: '900',   
         lineHeight: 20,   
-        PaddingTop:50,
+       
     },
     gif:{
         width:53,
@@ -115,17 +119,17 @@ const style=StyleSheet.create({
         fontFamily: 'Manrope',
         fontSize: 17,
         fontStyle: 'normal',
-        fontWeight: '700',
+        fontWeight: 'bold',
         lineHeight: 20,
         textAlignVertical: 'center',
-        width:190,
+        width:200,
         height:20
         
     },
-    textcontainer:{
+    textcontainer1:{
         //alignItems:'center',
-        paddingLeft:width*0.17,
-        paddingRight:61,
+        paddingLeft:width*0.14,
+       paddingRight:41,
         paddingTop:18
     },
     location:{
@@ -138,7 +142,7 @@ const style=StyleSheet.create({
         textAlign: 'center', 
     },
     textlocation:{
-        paddingLeft:90,
+        paddingLeft:89,
         paddingRight:90,
         paddingTop:12
     },
@@ -154,8 +158,8 @@ const style=StyleSheet.create({
          color: '#7A7A7A',
          fontFamily: 'Manrope',
          fontSize: 13,
-         fontStyle: 'normal',
-         fontWeight: '400',
+         //fontStyle: 'normal',
+         fontWeight: '500',
          lineHeight: 20,
          paddingLeft:9,
         
@@ -164,17 +168,21 @@ const style=StyleSheet.create({
          color: '#7A7A7A',
          fontFamily: 'Manrope',
          fontSize: 13,
-         fontStyle: 'normal',
-         fontWeight: '400',
+         //fontStyle: 'normal',
+         fontWeight: '500',
          lineHeight: 20,
          paddingLeft:39,
+         
+     
     },
     date:{
         flexDirection:'row',
-        paddingTop:16
+        paddingTop:16,
+        marginLeft:-5
     },
     month:{
       flexDirection:'row',
+      marginLeft:-5
       
     },
     sep:{
@@ -198,7 +206,7 @@ const style=StyleSheet.create({
     },
     s:{
        borderRadius: 4,
-       borderWidth: 1,
+       borderWidth: 1.5,
        borderColor: '#E5ECFF',
        backgroundColor: '#FFF', 
        color: '#101840',
@@ -208,14 +216,13 @@ const style=StyleSheet.create({
        fontWeight: '400',
        lineHeight: 20,
        textAlign: 'center',
-       width: 16,
+       width: 20,
        height: 19,
+       paddingTop:-1
     },
     m:{
        borderRadius: 4,
-       borderWidth: 1,
-       borderColor: '#E5ECFF',
-       backgroundColor: '#F3F5F9',
+       backgroundColor: '#E5ECFF',
        color: '#101840',
        fontFamily: 'Manrope',
        fontSize: 10,
@@ -228,7 +235,7 @@ const style=StyleSheet.create({
     },
     l:{
        borderRadius: 4,
-       borderWidth: 1,
+       borderWidth: 1.5,
        borderColor: '#E5ECFF',
        backgroundColor: '#FFF', 
        color: '#101840',
@@ -238,18 +245,27 @@ const style=StyleSheet.create({
        fontWeight: '400',
        lineHeight: 20,
        textAlign: 'center',
-       width: 25,
-       height: 24
+    //    width: 25,
+    //    height: 24,
+       width: 26,
+       height: 25,
+       paddingTop:2
+       
     },
     size:{
         flexDirection:'row',
-        paddingLeft:50
+        paddingLeft:50,
+        alignSelf: 'flex-end',
+       
     },
     sizeM:{
        paddingLeft:7,
+       marginTop:-3,
     },
     sizeL:{
-       paddingLeft:5
+       paddingLeft:5,
+       marginTop:-9,
+       padding:3
     },
     sizeS:{
         paddingLeft:10
@@ -262,7 +278,7 @@ const style=StyleSheet.create({
         borderBottomColor:'#EEE',
     },
     bidcontainer:{
-        paddingLeft:82,
+        paddingLeft:80,
         paddingTop:10,
         flexDirection:'row',
     },
@@ -284,10 +300,8 @@ const style=StyleSheet.create({
     but:{
         flexDirection:'row',
         alignContent:'center',
-        //width:"100%",
         display:'flex',
         paddingTop:20,
-        paddingRight:'0%',
 
     },
     but1:{
@@ -295,7 +309,7 @@ const style=StyleSheet.create({
         borderWidth: 1, 
         borderColor: '#36F', 
         backgroundColor: '#FFF', 
-        width: 136, 
+        width: 150, 
         height: 42,
     },
     but2:{
@@ -303,26 +317,31 @@ const style=StyleSheet.create({
         borderWidth: 1, 
         borderColor: '#36F', 
         backgroundColor: '#36F', 
-        width: 136,
+        width: 150,
         height: 42,
     },
     but2container:{
-        paddingLeft:20,
+        paddingLeft:16,
     },
     but1container:{
-        paddingLeft:10
+        paddingLeft:-2
     },
     but2Text:{
         fontWeight:'600',
         lineHeight: 20, // Line height
         letterSpacing: 0.2,
-        fontSize:14, 
+        fontSize:15, 
     },
     but1Text:{
         fontWeight:'600',
         lineHeight: 20, // Line height
         letterSpacing: 0.2,
-        fontSize:14,
+        fontSize:15,
+    },
+    share:{
+        marginLeft:313,
+        marginTop:-33
+
     }
 })
 export default Home_Body;

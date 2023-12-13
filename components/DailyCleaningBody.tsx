@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
     },
   Box: {
-    margin:'4%',
+    margin:'5%',
     paddingTop:'5%',
     paddingBottom:'5%',
     justifyContent:'space-around',
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     paddingRight:'8%'
   },
   Text:{
-    width: 200,
+    width: 207,
     color: '#000',
     fontFamily: 'Manrope',
     fontSize: 16,
