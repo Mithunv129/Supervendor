@@ -1,57 +1,68 @@
-import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  SafeAreaView,
+} from 'react-native';
 import SvgComponent from '../assets/SvgImage';
 const {width, height} = Dimensions.get('window');
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 function Home_Header() {
   return (
-    <View style={style.container1}>
-      <View style={style.header}>
+    <View
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}>
+      <View style={{display: 'flex', flexDirection: 'row'}}>
         <Image source={require('../assets/icon4.png')} style={style.image} />
         <Text style={style.container}>ARK</Text>
-        <View style={style.bellcss}>
-          <Image source={require('../assets/Bell.png')} style={style.bell} />
-        </View>
+      </View>
+
+      <View style={style.bellcss}>
+        <Image source={require('../assets/Bell.png')} style={style.bell} />
       </View>
     </View>
   );
 }
 
 const style = StyleSheet.create({
-  container1: {
-    marginTop: width * -0.04,
-  },
   header: {
-    flex: 1,
-    marginLeft: width * 0.04,
-    marginTop: height * 0.07,
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft:5,
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   image: {
-    width: 36,
-    height: 24,
-    //marginLeft:3
+    width: 38,
+    height: 25,
   },
   container: {
     width: 56,
     height: 28,
     color: '#000',
-    marginLeft: 5,
+    marginLeft: wp((8 / width) * 100),
     fontFamily: 'Futura PT',
     fontSize: 24,
     fontWeight: '800',
     fontStyle: 'normal',
     lineHeight: 28,
     letterSpacing: 0.15,
-    paddingTop:2
   },
   bell: {
     width: 23,
     height: 23,
   },
   bellcss: {
-    paddingTop: 8,
+    paddingTop: hp((7 / height) * 100),
+    margin: 0,
+
     width: 40,
     height: 40,
     backgroundColor: '#FFF',
@@ -60,8 +71,6 @@ const style = StyleSheet.create({
     elevation: 8,
     borderRadius: 30,
     alignItems: 'center',
-    marginLeft: width * 0.522
-    ,
   },
 });
 export default Home_Header;
