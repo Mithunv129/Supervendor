@@ -1,11 +1,213 @@
+// import {useState} from 'react';
+// import {View,Text,StyleSheet, TouchableOpacity,ScrollView,TextInput,TouchableHighlight} from 'react-native';
+// import { Avatar, Button, Card,Title} from 'react-native-paper';
+// import CheckBox from 'react-native-check-box';
+// import Plus from '../assets/Plus'
+// import Check1 from '../assets/Check1';
+// import Check2 from '../assets/check2';
+// import {useNavigation} from '@react-navigation/native'
+
+// function CreateSubContractBody(){
+//     const navigation:any=useNavigation();
+//     const NavigateToNextPage=()=>{
+//         navigation.navigate('Select_Location')
+//     }
+//     const [isChecked,setisChecked]=useState(false);
+//     const [subcontractName, setSubcontractName] = useState('');
+//     const toggleisChecked=()=>{
+//         setisChecked(!isChecked);
+//     }
+//     return(
+//         <View style={style.container}>
+//             <View style={style.card}>
+//                 <View style={style.content}>
+//                  <Check1/>
+//                  <Text style={style. checkboxText}>Create Subcontract</Text>
+//                 </View>
+//                 <View style={style.divider1}></View> 
+//                 <View style={style.content1}>
+//                 <TouchableHighlight underlayColor="transparent" onPress={NavigateToNextPage}>
+//                  <View style={style.Button}>
+//                     <Plus />
+//                    <Text style={style.bText}>Add locations</Text>
+//                  </View>
+//                  </TouchableHighlight>
+//                  <View>
+//                     <Text style={style.subcontract}>Subcontract name</Text>
+//                     <View style={style.subcontractText}>
+//                     <TextInput
+//                     style={style.Input}
+//                     underlineColorAndroid="transparent"
+//                     onChangeText={(text) => setSubcontractName(text)}
+//                     />
+//                     </View>
+                   
+//                  </View>
+//                </View> 
+//             </View>
+//             <View style={style.card1}>
+//                 <View style={style.MultiCon}>
+//                     <Check2/>
+//                     <Text style={style.MultiConText}>Create multiple subcontracts</Text>
+//                 </View>
+//             </View>
+//             <View style={style.ButtonView}>
+//                 <Button onPress={() => {}}
+//                     labelStyle={style.buttonLabel}
+//                 >
+//                     Continue
+//                 </Button>
+//             </View>
+//         </View >
+        
+        
+//     )
+// }
+//  const style=StyleSheet.create({
+//      container:{
+//         backgroundColor:"#F3F5F9",
+//         height:'100%',
+//         width:'100%',
+//      },
+//      card:{
+//         backgroundColor:'#FFF',
+//         margin:'4%',
+//         marginTop:'5%',
+//         width:'92%',
+//         height:'47%',
+//         borderRadius:10
+        
+//      },
+//      card1:{
+//         backgroundColor:'#FFF',
+//         margin:'4%',
+//         marginTop:'5%',
+//         width:'92%',
+//         height:'8%',
+//         borderRadius:10
+        
+//      },
+     
+//      checkboxText:{
+//         color: '#101840',
+//         fontFamily: 'Manrope',
+//         fontSize: 19,
+//         fontStyle: 'normal',
+//         fontWeight: '600',
+//         lineHeight: 20,
+//         marginTop:'2%',
+//         paddingLeft:'3%'
+
+//      },
+//      content:{
+//         marginLeft:'4%',
+//         marginTop:'7%',
+//         flexDirection:'row'
+//      },
+//      divider1:{
+//         paddingTop:32,
+//         borderBottomWidth:5,
+//         borderBottomColor:'#EEE',
+//     },
+//     Button:{
+//         borderRadius: 12,
+//         borderWidth: 1,
+//         flexDirection:'row',
+//         padding:'5%',
+//         borderColor:'#EEEEEE',
+//     },
+//     content1:{
+//         paddingTop:'5%',
+//         paddingLeft:'4%',
+//         paddingRight:'4%'
+//     },
+//     bText:{
+//         color: '#36F',
+//         fontFamily: 'Manrope',
+//         fontSize: 19,
+//         fontStyle: 'normal',
+//         fontWeight: '400',
+//         lineHeight: 22, 
+//         letterSpacing: 0.25,
+//         paddingLeft:'4%',
+//         paddingTop:'1%'
+//     },
+//     subcontract:{
+//         color:'#474D66', 
+//         fontFamily: 'Manrope',
+//         fontSize: 16,
+//         fontStyle: 'normal',
+//         fontWeight: '400',
+//         lineHeight: 20, 
+//         letterSpacing: 0.4,
+//         paddingTop:'10%' ,
+        
+//     },
+//     Input:{
+//         borderRadius:12,
+//         borderWidth:1,
+//         borderColor:'#EEE',
+//         height: 60,
+//         paddingVertical: 10,
+//         paddingHorizontal: 12,
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         marginVertical: 8, 
+//         alignSelf: 'stretch',
+        
+//     },
+//     subcontractText:{
+//         paddingTop:'2%',
+//     },
+//     MultiCon:{
+//         paddingLeft:'4%',
+//         paddingRight:'4%',
+//         paddingTop:'5%',
+//         flexDirection:'row'
+//     },
+//     MultiConText:{
+//         color: '#101840',
+//         fontFamily: 'Manrope',
+//         fontSize: 19,
+//         fontStyle: 'normal',
+//         fontWeight: '600',
+//         lineHeight: 20,
+//         paddingTop:'2%',
+//         paddingLeft:'3%'
+//     },
+//     ButtonView:{
+//         marginLeft:'4%',
+//         marginRight:'4%',
+//         backgroundColor:'#36F',
+//         borderRadius:10,
+//         marginTop:'52%',
+//         paddingTop:'2%',
+//         paddingBottom:'2%'
+//     },
+//     buttonLabel:{
+//         color:'white',
+//         fontFamily: 'Lato',
+//         fontSize: 19,
+//         fontStyle: 'normal',
+//         fontWeight: '500',
+//         lineHeight: 24,
+//         letterSpacing: 0.15,
+//     }
+//  })
+// export default CreateSubContractBody;
 import {useState} from 'react';
-import {View,Text,StyleSheet, TouchableOpacity,ScrollView,TextInput,TouchableHighlight} from 'react-native';
+import {View,Text,StyleSheet, TouchableOpacity,ScrollView,TextInput,TouchableHighlight,Dimensions} from 'react-native';
 import { Avatar, Button, Card,Title} from 'react-native-paper';
 import CheckBox from 'react-native-check-box';
 import Plus from '../assets/Plus'
 import Check1 from '../assets/Check1';
 import Check2 from '../assets/check2';
 import {useNavigation} from '@react-navigation/native'
+import {
+    widthPercentageToDP as wp,
+    heightPercentageToDP as hp,
+  } from 'react-native-responsive-screen';
+  const {width, height, scale} = Dimensions.get('window');
 
 function CreateSubContractBody(){
     const navigation:any=useNavigation();
@@ -27,6 +229,7 @@ function CreateSubContractBody(){
                 <View style={style.divider1}></View> 
                 <View style={style.content1}>
                 <TouchableHighlight underlayColor="transparent" onPress={NavigateToNextPage}>
+
                  <View style={style.Button}>
                     <Plus />
                    <Text style={style.bText}>Add locations</Text>
@@ -51,6 +254,7 @@ function CreateSubContractBody(){
                     <Text style={style.MultiConText}>Create multiple subcontracts</Text>
                 </View>
             </View>
+            <View style={{flex:1,display:"flex",justifyContent:"flex-end",marginBottom:hp((100/height)*100)}}>
             <View style={style.ButtonView}>
                 <Button onPress={() => {}}
                     labelStyle={style.buttonLabel}
@@ -58,6 +262,8 @@ function CreateSubContractBody(){
                     Continue
                 </Button>
             </View>
+            </View>
+           
         </View >
         
         
@@ -66,46 +272,69 @@ function CreateSubContractBody(){
  const style=StyleSheet.create({
      container:{
         backgroundColor:"#F3F5F9",
-        height:'100%',
-        width:'100%',
+        height:hp(100),
+        // flexDirection:"column",
+        
+      //  width:'100%',
      },
      card:{
         backgroundColor:'#FFF',
-        margin:'4%',
-        marginTop:'5%',
-        width:'92%',
-        height:'47%',
+       // margin:'4%',
+        marginTop:hp((24/height)*100),
+        // width:'92%',
+        // height:'47%',
+        paddingBottom:hp((36/height)*100),
         borderRadius:10
         
      },
      card1:{
         backgroundColor:'#FFF',
-        margin:'4%',
-        marginTop:'5%',
-        width:'92%',
-        height:'8%',
+       // margin:'4%',
+        paddingLeft:wp((19/width)*100),
+
+        marginTop:hp((24/height)*100),
+       // width:'92%',
+        height:hp(8),
         borderRadius:10
         
      },
+     ButtonView:{
+        // marginLeft:'4%',
+        // marginRight:'4%',
+        backgroundColor:'#36F',
+        borderRadius:10,
+       // alignItems:'flex-end',
+      //  flex:1,
+        //marginTop:hp((60/height)*100),
+        //marginBottom:hp((40/height)*100),
+        
+        paddingTop:hp((12/height)*100),
+        paddingBottom:hp((12/height)*100),
+        paddingRight:wp((24/width)*100),
+        paddingLeft:wp((24/width)*100),
+    },
      
      checkboxText:{
         color: '#101840',
         fontFamily: 'Manrope',
-        fontSize: 19,
+        fontSize: hp(2.1),
         fontStyle: 'normal',
         fontWeight: '600',
         lineHeight: 20,
-        marginTop:'2%',
-        paddingLeft:'3%'
+        marginTop:hp((3/height)*100),
+         marginLeft:wp((8/width)*100),
 
      },
      content:{
         marginLeft:'4%',
-        marginTop:'7%',
-        flexDirection:'row'
+      //  marginTop:'7%',
+      paddingTop:hp((20/height)*100),
+      paddingBottom:hp((24/height)*100),
+        flexDirection:'row',
+        alignItems:"center",
      },
      divider1:{
-        paddingTop:32,
+        //paddingTop:wp((24/width)*100),
         borderBottomWidth:5,
         borderBottomColor:'#EEE',
     },
@@ -113,81 +342,78 @@ function CreateSubContractBody(){
         borderRadius: 12,
         borderWidth: 1,
         flexDirection:'row',
-        padding:'5%',
+        padding:wp((13/width)*100),
         borderColor:'#EEEEEE',
     },
     content1:{
-        paddingTop:'5%',
-        paddingLeft:'4%',
-        paddingRight:'4%'
+        paddingTop:hp((32/height)*100),
+        paddingLeft:wp((20/width)*100),
+        paddingRight:wp((20/width)*100)
     },
     bText:{
         color: '#36F',
         fontFamily: 'Manrope',
-        fontSize: 19,
+        fontSize: hp(2),
         fontStyle: 'normal',
         fontWeight: '400',
         lineHeight: 22, 
         letterSpacing: 0.25,
-        paddingLeft:'4%',
-        paddingTop:'1%'
+        // paddingLeft:'4%',
+        // paddingTop:'1%'
+        marginLeft:wp((8/width)*100),
+        marginTop:hp((3/height)*100),
     },
     subcontract:{
         color:'#474D66', 
         fontFamily: 'Manrope',
-        fontSize: 16,
+        fontSize: hp(1.8),
         fontStyle: 'normal',
         fontWeight: '400',
         lineHeight: 20, 
         letterSpacing: 0.4,
-        paddingTop:'10%' ,
+        opacity:.8,
+      //  paddingTop:'10%' ,
+      marginTop:hp((24/height)*100),
         
     },
     Input:{
         borderRadius:12,
         borderWidth:1,
         borderColor:'#EEE',
-        height: 60,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
+        height: hp((53 /height)*100),
+       // paddingVertical: 10,
+        paddingLeft:wp((12/width)*100),
         justifyContent: 'center',
         alignItems: 'center',
-        marginVertical: 8, 
+        marginVertical:hp((4/height)*100) , 
         alignSelf: 'stretch',
+        color:"black",
         
     },
     subcontractText:{
         paddingTop:'2%',
     },
     MultiCon:{
-        paddingLeft:'4%',
-        paddingRight:'4%',
-        paddingTop:'5%',
+      //  paddingLeft:'4%',
+       // paddingRight:'4%',
+        paddingTop:hp((20/height)*100),
         flexDirection:'row'
     },
     MultiConText:{
         color: '#101840',
         fontFamily: 'Manrope',
-        fontSize: 19,
+        fontSize: hp(2),
         fontStyle: 'normal',
         fontWeight: '600',
         lineHeight: 20,
-        paddingTop:'2%',
-        paddingLeft:'3%'
+        paddingTop:hp((6/height)*100),
+        marginLeft:wp((6/width)*100)
     },
-    ButtonView:{
-        marginLeft:'4%',
-        marginRight:'4%',
-        backgroundColor:'#36F',
-        borderRadius:10,
-        marginTop:'52%',
-        paddingTop:'2%',
-        paddingBottom:'2%'
-    },
+    
     buttonLabel:{
         color:'white',
         fontFamily: 'Lato',
-        fontSize: 19,
+        fontSize: hp(2.3),
         fontStyle: 'normal',
         fontWeight: '500',
         lineHeight: 24,

@@ -66,7 +66,7 @@ function App() {
                 <SvgChat />
               </View>
             ),
-            headerLeft: (props) => <CustomHeaderLeft {...props} marginLeft={24} />,
+            //headerLeft: (props) => <CustomHeaderLeft {...props} marginLeft={24} />,
             headerShadowVisible: false,
           }}
         />
