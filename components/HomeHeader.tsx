@@ -27,8 +27,8 @@ function Home_Header() {
         <Text style={style.container}>ARK</Text>
       </View>
 
-      <View style={style.bellcss}>
-        <Image source={require('../assets/Bell.png')} style={style.bell} />
+      <View style={style.bellContainer}>
+        <Image source={require('../assets/Bell.png')} style={style.bellImage} />
       </View>
     </View>
   );
@@ -49,17 +49,17 @@ const style = StyleSheet.create({
     color: '#000',
     marginLeft: wp((8 / width) * 100),
     fontFamily: 'Futura PT',
-    fontSize: 24,
+    fontSize: hp(2.9),
     fontWeight: '800',
     fontStyle: 'normal',
     lineHeight: 28,
     letterSpacing: 0.15,
   },
-  bell: {
+  bellImage: {
     width: 23,
     height: 23,
   },
-  bellcss: {
+  bellContainer: {
     paddingTop: hp((7 / height) * 100),
     margin: 0,
 

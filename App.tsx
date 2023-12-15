@@ -6,7 +6,7 @@ import SelectLocation from './Screens/SelectLocation';
 import SubContractDetails from './Screens/SubContractDetails';
 import Vendors from './Screens/Vendors';
 import SubContactSummary from './Screens/SubContactSummary';
-import Congratulation from './Screens/Congratulation';
+import Congratulation from './Screens/congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
