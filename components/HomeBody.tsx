@@ -145,8 +145,8 @@ const style = StyleSheet.create({
     backgroundColor: '#FFF',
     paddingTop:hp((4 / height) * 100),
     paddingBottom: hp((4 / height) * 100),
-    paddingLeft: wp((18 / width) * 100),
-    paddingRight: wp((18 / width) * 100),
+    paddingLeft: wp((24 / width) * 100),
+    paddingRight: wp((24 / width) * 100),
   },
   but2: {
     borderRadius: 16,
@@ -155,20 +155,20 @@ const style = StyleSheet.create({
     backgroundColor: '#36F',
     paddingTop:hp((4 / height) * 100),
     paddingBottom: hp((4 / height) * 100),
-    paddingLeft: wp((18 / width) * 100),
-    paddingRight: wp((18 / width) * 100),
+    paddingLeft: wp((12 / width) * 100),
+    paddingRight: wp((12 / width) * 100),
   },
   but2Text: {
     fontWeight: '500',
     lineHeight: 20,
     letterSpacing: 0.2,
-    fontSize: 15,
+    fontSize: hp("1.8%"),
   },
   but1Text: {
     fontWeight: '500',
     lineHeight: 20, // Line height
     letterSpacing: 0.2,
-    fontSize: 15,
+    fontSize: hp("1.8%"),
   },
   bidcontainer: {
     marginTop: hp((-8 / height) * 100),
@@ -200,7 +200,7 @@ const style = StyleSheet.create({
     color: '#1CA49C',
     textAlign: 'center',
     fontFamily: 'Manrope',
-    fontSize: hp('2%'),
+    fontSize: hp(2),
     fontStyle: 'normal',
     fontWeight: '900',
     lineHeight: 20,
@@ -209,10 +209,11 @@ const style = StyleSheet.create({
     position: 'absolute',
     right: wp((8 / width) * 100),
     top: -hp((16 / height) * 100),
+
   },
   gif: {
-    width: 53,
-    height: 53,
+    width:  hp(7),
+    height:  hp(7),
   },
   gifContainer: {
     alignItems: 'center',
@@ -244,7 +245,7 @@ const style = StyleSheet.create({
     marginTop: hp((12 / height) * 100),
   },
   divider: {
-    marginTop: hp((16 / height) * 100),
+    marginTop: hp((10 / height) * 100),
 
     borderBottomWidth: 2,
     borderBottomColor: '#EEE',
