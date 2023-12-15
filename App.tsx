@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,Dimensions} from 'react-native';
 import HomePage from './Screens/HomePage';
 import DailyCleaning from './Screens/DailyCleaning';
 import CreateSubContract from './Screens/CreateSubContract';
@@ -6,10 +6,15 @@ import SelectLocation from './Screens/SelectLocation';
 import SubContractDetails from './Screens/SubContractDetails';
 import Vendors from './Screens/Vendors';
 import SubContactSummary from './Screens/SubContactSummary';
-import Congratulation from './Screens/congratulation';
+import Congratulation from './Screens/Congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
+const {width, height, scale} = Dimensions.get('window');
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 const Stack = createNativeStackNavigator();
 const CreateSubcontractHeader = () => {
@@ -51,15 +56,17 @@ function App() {
             title: 'Daily general clea...',
             headerStyle: {
               backgroundColor: '#F3F5F9',
+              
             },
             headerTitleStyle: {
               fontSize: 22,
             },
             headerRight: () => (
-              <View style={style.headerRightContainer}>
+              <View style={[style.headerRightContainer, { marginRight: wp((10/width)*100),}]}>
                 <SvgChat />
               </View>
             ),
+            headerLeft: (props) => <CustomHeaderLeft {...props} marginLeft={24} />,
             headerShadowVisible: false,
           }}
         />
@@ -70,6 +77,7 @@ function App() {
             title: 'Create Subcontract',
             headerStyle: {
               backgroundColor: '#F3F5F9',
+              
             },
             headerTitleStyle: {
               fontSize: 22,
