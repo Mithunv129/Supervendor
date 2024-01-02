@@ -232,11 +232,38 @@ function App() {
           })}
         />
         <Stack.Screen
+          // name="congratulationPage"
+          // component={Congratulation}
+          // options={{
+          //   headerShown: false, // Hide the header for the "home" screen
+          // }}
           name="congratulationPage"
           component={Congratulation}
-          options={{
-            headerShown: false, // Hide the header for the "home" screen
-          }}
+          options={({ navigation }) => ({
+            title: 'Success',
+            headerStyle: {
+              backgroundColor: '#F3F5F9',
+            },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((115 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Success</Text>
+              </View>
+            ),
+            headerTitleStyle: {
+              fontSize: 22,
+            },
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            headerBackVisible: false,
+            headerShadowVisible: false,
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>
