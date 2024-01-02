@@ -362,13 +362,12 @@ function SubContact_Summary_Body() {
   const toggleisChecked = () => {
     setisChecked(!isChecked);
   };
-  const [fetchedData, setFetchedData] = useState([]); // Store the fetched data
-  const [lastElements, setLastElements] = useState([]); // Store the fetched last elements as an array
+  const [fetchedData, setFetchedData] = useState([]); 
+  const [lastElements, setLastElements] = useState([]); 
 
-  const apiUrl = 'https://2f83-122-186-163-190.ngrok.io/users';
+  const apiUrl = 'https://supervendorbackend-production.up.railway.app/users';
 
-  useEffect(() => {
-    // Function to fetch data from the API
+  useEffect(() => { 
     const fetchData = async () => {
       try {
         const response = await axios.get(apiUrl);
@@ -376,16 +375,15 @@ function SubContact_Summary_Body() {
 
         const data = response.data;
         console.log('Fetched Data:', typeof data[data.length - 1].name);
-        setFetchedData(data); // Update the state with the fetched data
+        setFetchedData(data); 
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
-    // Call the fetchData function when the component mounts
     fetchData();
     return () => {};
-  }, []); // The empty dependency array ensures the effect runs only once
+  }, []); 
   //    console.log(fetchedData);
   const lastElement: [] =
     fetchedData.length > 0
@@ -427,12 +425,12 @@ function SubContact_Summary_Body() {
           <View>
             <Text style={style.subcontract}>Subcontract name</Text>
             <View style={style.subcontractText}>
-              <TextInput
+              {/* <TextInput
                 style={style.Input}
                 underlineColorAndroid="transparent"
                 onChangeText={text => setSubcontractName(text)}
-              />
-              <Text style={{color: 'black'}}></Text>
+              /> */}
+              <Text style={{color: 'black'}}>{subname}</Text>
             </View>
           </View>
         </View>
@@ -502,12 +500,14 @@ const style = StyleSheet.create({
     color: 'black',
   },
   facilitiesContainer: {
-    marginTop: 10,
+    // marginTop: 10,
+    marginTop:hp((10/height)*100),
+
   },
   selectVendorsText: {
     color:'#474D66', 
     fontFamily: 'Manrope',
-    fontSize: hp(1.8),
+    fontSize: hp(2),
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 20, 
@@ -516,12 +516,12 @@ const style = StyleSheet.create({
     
   },
   facilitiestext: {
-    color: '#474D66', // Use the color value directly
+    color: '#474D66', 
     fontFamily: 'Manrope',
-    fontSize: 12,
+    fontSize: hp(1.7),
     fontStyle: 'normal',
     fontWeight: '400',
-    lineHeight: 20, // Assuming you are using a numeric value in React Native
+    lineHeight: 20, 
     letterSpacing: 0.4,
   },
   card1: {
@@ -614,7 +614,7 @@ const style = StyleSheet.create({
   MultiConText: {
         color: '#101840',
         fontFamily: 'Manrope',
-        fontSize: hp(2),
+        fontSize: hp(1.8),
         fontStyle: 'normal',
         fontWeight: '600',
         lineHeight: 20,
@@ -628,7 +628,7 @@ const style = StyleSheet.create({
     color: '#36F',
 
     fontFamily: 'Lato',
-    fontSize: hp(1.9),
+    fontSize: hp(2),
     fontWeight: '500',
     lineHeight: 24,
     letterSpacing: 0.15,
@@ -636,7 +636,7 @@ const style = StyleSheet.create({
   openForBids: {
     color: 'white',
     fontFamily: 'Lato',
-    fontSize: hp(1.9),
+    fontSize: hp(2),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 24,

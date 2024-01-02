@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image,Dimensions} from 'react-native';
+import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
 import HomePage from './Screens/HomePage';
 import DailyCleaning from './Screens/DailyCleaning';
 import CreateSubContract from './Screens/CreateSubContract';
@@ -10,6 +10,7 @@ import Congratulation from './Screens/Congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
+import BackArrow from './assets/BackArrow';
 const {width, height, scale} = Dimensions.get('window');
 import {
   widthPercentageToDP as wp,
@@ -52,95 +53,185 @@ function App() {
         <Stack.Screen
           name="Daily_Cleaning"
           component={DailyCleaning}
-          options={{
+          options={({ navigation }) => ({
             title: 'Daily general clea...',
             headerStyle: {
               backgroundColor: '#F3F5F9',
-              
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Daily general clea...</Text>
+              </View>
+            ),
             headerTitleStyle: {
               fontSize: 22,
             },
+
             headerRight: () => (
-              <View style={[style.headerRightContainer, { marginRight: wp((10/width)*100),}]}>
+              <View
+                style={[
+                  style.headerRightContainer,
+                  {marginRight: wp((10 / width) * 100)},
+                ]}>
                 <SvgChat />
               </View>
             ),
-            //headerLeft: (props) => <CustomHeaderLeft {...props} marginLeft={24} />,
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            
+            headerBackVisible: false,
+           
             headerShadowVisible: false,
-          }}
+          })}
         />
         <Stack.Screen
           name="Create_SubContract"
           component={CreateSubContract}
-          options={{
+          options={({ navigation }) => ({
             title: 'Create Subcontract',
             headerStyle: {
               backgroundColor: '#F3F5F9',
-              
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text>
+              </View>
+            ),
             headerTitleStyle: {
               fontSize: 22,
             },
             headerRight: () => CreateSubcontractHeader(),
-            headerShadowVisible: false,
-          }}
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            
+            headerBackVisible: false,
+           
+            headerShadowVisible: false,           })}
         />
         <Stack.Screen
           name="Select_Location"
           component={SelectLocation}
-          options={{
-            title: 'Select Location',
-          }}
+          options={({ navigation }) => ({
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            
+            headerBackVisible: false,
+          })}
         />
         <Stack.Screen
           name="SubContract_Details"
           component={SubContractDetails}
-          options={{
+          options={({ navigation }) => ({
             title: 'Create Subcontract',
             headerStyle: {
               backgroundColor: '#F3F5F9',
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text>
+              </View>
+            ),
             headerTitleStyle: {
               fontSize: 22,
             },
             headerRight: () => CreateSubcontractHeader(),
+             headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            headerBackVisible: false,
             headerShadowVisible: false,
-          }}
+          })}
         />
         <Stack.Screen
           name="Vendors"
           component={Vendors}
-          options={{
+          options={({ navigation }) => ({
             title: 'Vendors',
             headerStyle: {
               backgroundColor: '#F3F5F9',
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Vendors</Text>
+              </View>
+            ),
             headerTitleStyle: {
               fontSize: 22,
             },
             headerRight: () => VendorsHeader(),
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            headerBackVisible: false,
             headerShadowVisible: false,
-          }}
+          })}
         />
         <Stack.Screen
           name="SubContact_Summary"
           component={SubContactSummary}
-          options={{
+          options={({ navigation }) => ({
             title: 'Subcontract Summary',
             headerStyle: {
               backgroundColor: '#F3F5F9',
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
+                <Text style={{ fontSize: 22 ,color:'black'}}>Subcontract Summary</Text>
+              </View>
+            ),
             headerTitleStyle: {
               fontSize: 22,
             },
             headerRight: () => SubcontractSummaryHeader(),
+            headerLeft: ({ onPress, ...props }) => (
+              <BackArrow
+                marginLeft={wp((8 / width) * 100)}
+                onPress={() => {
+
+                  navigation.goBack();
+                }}
+              />
+            ),
+            headerBackVisible: false,
             headerShadowVisible: false,
-          }}
+          })}
         />
         <Stack.Screen
           name="congratulationPage"
-          component={Congratulation }
+          component={Congratulation}
           options={{
             headerShown: false, // Hide the header for the "home" screen
           }}

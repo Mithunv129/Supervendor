@@ -198,14 +198,12 @@ export function Vendors_Body(): JSX.Element {
   const handlePress = (key: string) => {
     const updatedActions = [...actions];
 
-    // Find the selected item and update its borderColor
     const selectedItem = updatedActions.find(item => item.key === key);
     if (selectedItem) {
       selectedItem.borderColor =
         selectedItem.borderColor === '#F3F5F9' ? '#3366FF' : '#F3F5F9';
     }
 
-    // Update the state with the modified actions array
     setAction(updatedActions);
   };
   return (
@@ -310,7 +308,7 @@ const styles = StyleSheet.create({
     color: '#36F',
 
     fontFamily: 'Lato',
-    fontSize: hp(1.9),
+    fontSize: hp(2),
     fontWeight: '500',
     lineHeight: 24,
     letterSpacing: 0.15,
@@ -318,7 +316,7 @@ const styles = StyleSheet.create({
   openForBids: {
     color: 'white',
     fontFamily: 'Lato',
-    fontSize: hp(1.9),
+    fontSize: hp(2),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 24,

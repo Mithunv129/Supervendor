@@ -142,7 +142,7 @@ const componentMap = {
   SvgNote: (props: {size: number}) => <SvgNote {...props} />,
   SvgNote2: (props: {size: number}) => <SvgNote2 {...props} />,
 
-  // Add more components here if needed
+ 
 };
 
 export function DailyCleaning(): JSX.Element {
@@ -160,7 +160,6 @@ export function DailyCleaning(): JSX.Element {
   return (
     <View style={styles.container}>
       {actions.map(item => {
-        // Import the component based on item.name
         const SvgComponent = componentMap[item.name];
         return (
           <TouchableOpacity
@@ -191,8 +190,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   actionContainer: {
-    paddingTop: hp((16.58 / height) * 100),
-    paddingBottom: hp((17.42 / height) * 100),
+    paddingTop: hp((17.58 / height) * 100),
+    paddingBottom: hp((18.42 / height) * 100),
     justifyContent: 'space-around',
     alignItems: 'center',
     marginTop: '5%',

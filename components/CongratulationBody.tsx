@@ -13,10 +13,10 @@ const style=StyleSheet.create({
   text:{
     textAlign:'center',
     color:'black',
-    fontFamily: 'Manrope', // Font family (ensure you have the font loaded)
-    fontSize: 25, // Font size
-    fontStyle: 'normal', // Font style
-    fontWeight: '400', // Font weight'
+    fontFamily: 'Manrope', 
+    fontSize: 25,
+    fontStyle: 'normal', 
+    fontWeight: '400', 
   },
   textview:{
     paddingTop:'80%',

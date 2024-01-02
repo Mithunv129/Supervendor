@@ -43,16 +43,13 @@
 //    // flex: 3.5,
 //     //marginBottom:'100%',
 //   //  backgroundColor:'red',
-    
+
 //   },
 // });
 
 // export default SelectLocation;
 
-
-
-
-import { StyleSheet,Text,View,Image,Dimensions} from 'react-native';
+import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
 import VendorsBody from '../components/VendorsBody';
 import {
   widthPercentageToDP as wp,
@@ -60,17 +57,18 @@ import {
 } from 'react-native-responsive-screen';
 const {width, height, scale} = Dimensions.get('window');
 
-function Vendors(){
-    return(
-      <View style={{flex:1,backgroundColor:"#F3F5F9"}}>
-        <View style={{marginLeft:wp((24/width)*100),marginRight:wp((24/width)*100)}}>
-          
-          <VendorsBody/>
-
-          
-        </View>
-        </View>
-    )
+function Vendors() {
+  return (
+    <View style={{flex: 1, backgroundColor: '#F3F5F9'}}>
+      <View
+        style={{
+          marginLeft: wp((24 / width) * 100),
+          marginRight: wp((24 / width) * 100),
+        }}>
+        <VendorsBody />
+      </View>
+    </View>
+  );
 }
 
 export default Vendors;

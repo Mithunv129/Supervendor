@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
    
   },
   text: {
-    color: '#101840', // Text color
-    fontFamily: 'Manrope', // Font family
-    fontSize: 20, // Font size
-    fontStyle: 'normal', // Font style
-    fontWeight: '400', // Font weight
-    lineHeight: 22, // Line height (in points or adjust as needed)
+    color: '#101840', 
+    fontFamily: 'Manrope', 
+    fontSize: 20, 
+    fontStyle: 'normal', 
+    fontWeight: '400', 
+    lineHeight: 22, 
   },
 });
 

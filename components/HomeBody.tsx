@@ -166,7 +166,7 @@ const style = StyleSheet.create({
   },
   buttonOneText: {
     fontWeight: '500',
-    lineHeight: 20, // Line height
+    lineHeight: 20,
     letterSpacing: 0.2,
     fontSize: hp(1.8),
   },
@@ -224,7 +224,8 @@ const style = StyleSheet.create({
     fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
-    fontWeight: 'bold',
+   // fontWeight: 'bold',
+   fontWeight:"700",
     lineHeight: 20,
     textAlignVertical: 'center',
   },
