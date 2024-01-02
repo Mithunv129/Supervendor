@@ -29,7 +29,7 @@ const style = StyleSheet.create({
   },
   inputContainer: {
     borderRadius: 14,
-    padding: '1.2%',
+    padding: '1.4%',
     borderWidth: 1,
     height: hp(7),
     borderColor: 'rgba(51, 102, 255, 0.5)',
