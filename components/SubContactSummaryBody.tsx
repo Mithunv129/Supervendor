@@ -314,6 +314,8 @@ const style = StyleSheet.create({
     fontFamily: 'Lato',
     fontSize: hp(2),
     fontStyle: 'normal',
+    paddingTop:hp((2 / height) * 100),
+
     fontWeight: '500',
     lineHeight: 24,
     letterSpacing: 0.15,

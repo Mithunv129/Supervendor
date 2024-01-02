@@ -72,7 +72,7 @@ const style=StyleSheet.create({
     textAlign:'center',
     color:'black',
     fontFamily: 'Manrope', 
-    fontSize: 20,
+    fontSize: hp(2.5),
     fontStyle: 'normal', 
     fontWeight: '400', 
   },
@@ -85,11 +85,11 @@ const style=StyleSheet.create({
   subtext:{
     textAlign:'center',
     color: '#101840',
-    fontfamily: 'Manrope',
-    fontsize: 25,
-    fontstyle: 'normal',
-    fontweight: '400',
-    lineheight: 22
+    fontFamily: 'Manrope',
+    fontSize: hp(2),
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 22
   },
   ButtonView: {
     backgroundColor: '#36F',

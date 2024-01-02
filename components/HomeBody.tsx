@@ -220,6 +220,7 @@ const style = StyleSheet.create({
   gifContainer: {
     alignItems: 'center',
     marginTop: hp((32 / height) * 100),
+    marginLeft:wp((24 / width) * 100),//
   },
   daily: {
     color: '#101840',

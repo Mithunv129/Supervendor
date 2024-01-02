@@ -266,13 +266,9 @@ const styles = StyleSheet.create({
   container1: {
     backgroundColor: '#F3F5F9',
     height: hp(100),
-    // height: '100%',
   },
-  // container: {
-  //   flexDirection: 'row',
-  // },
+  
   Box: {
-    // margin: '4%',
     paddingTop: hp((18 / height) * 100),
     paddingBottom: hp((20 / height) * 100),
     marginTop: hp((16 / height) * 100),
@@ -299,10 +295,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
 
-    // paddingBottom: '-6%',
-    // flex: 3,
-    //display: 'flex',
-    // alignItems: 'center',
+
   },
   saveAndExit: {
     color: '#36F',
@@ -317,6 +310,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontFamily: 'Lato',
     fontSize: hp(2),
+    paddingTop:hp((2 / height) * 100),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 24,
@@ -327,22 +321,17 @@ const styles = StyleSheet.create({
     height: hp(7),
     borderColor: '#36F',
     borderWidth: 1,
-    // marginLeft: '4%',
-    // marginRight: '4%',
     backgroundColor: '#FFF',
     borderRadius: 12,
-    // marginTop: '52%',
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
   },
   Button2: {
     width: wp(40),
     height: hp(7),
-    // marginLeft: '4%',
-    // marginRight: '4%',
+   
     backgroundColor: '#36F',
     borderRadius: 12,
-    // marginTop: '52%',
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
   },

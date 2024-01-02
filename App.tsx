@@ -6,7 +6,7 @@ import SelectLocation from './Screens/SelectLocation';
 import SubContractDetails from './Screens/SubContractDetails';
 import Vendors from './Screens/Vendors';
 import SubContactSummary from './Screens/SubContactSummary';
-import Congratulation from './Screens/Congratulation';
+import Congratulation from './Screens/congratulation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
@@ -232,11 +232,7 @@ function App() {
           })}
         />
         <Stack.Screen
-          // name="congratulationPage"
-          // component={Congratulation}
-          // options={{
-          //   headerShown: false, // Hide the header for the "home" screen
-          // }}
+        
           name="congratulationPage"
           component={Congratulation}
           options={({ navigation }) => ({
@@ -246,7 +242,7 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((115 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Success</Text>
+                <Text style={{  fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Success</Text>
               </View>
             ),
             headerTitleStyle: {
