@@ -161,11 +161,13 @@ const style = StyleSheet.create({
   buttonTwoText: {
     fontWeight: '500',
     lineHeight: 20,
+    fontFamily: "Lato",
     letterSpacing: 0.2,
     fontSize: hp(1.8),
   },
   buttonOneText: {
     fontWeight: '500',
+    fontFamily: "Lato",
     lineHeight: 20,
     letterSpacing: 0.2,
     fontSize: hp(1.8),
@@ -202,7 +204,7 @@ const style = StyleSheet.create({
     fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
-    fontWeight: '900',
+    fontWeight: '700',
     lineHeight: 20,
   },
   sharebutton: {
@@ -262,7 +264,7 @@ const style = StyleSheet.create({
     fontFamily: 'Manrope',
     fontSize: hp(1.6),
     fontStyle: 'normal',
-    fontWeight: '500',
+    fontWeight: '400',
     lineHeight: 20,
   },
   endDateContainer: {
@@ -270,7 +272,7 @@ const style = StyleSheet.create({
     fontFamily: 'Manrope',
     fontSize: hp(1.6),
     fontStyle: 'normal',
-    fontWeight: '500',
+    fontWeight: '400',
     lineHeight: 20,
   },
   date: {

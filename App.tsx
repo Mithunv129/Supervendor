@@ -60,7 +60,7 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Daily general clea...</Text>
+                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Daily general clea...</Text>
               </View>
             ),
             headerTitleStyle: {
@@ -101,7 +101,9 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text>
+                {/* <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text> */}
+                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Create Subcontract</Text>
+
               </View>
             ),
             headerTitleStyle: {
@@ -149,7 +151,7 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text>
+                <Text style={{fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Create Subcontract</Text>
               </View>
             ),
             headerTitleStyle: {
@@ -179,7 +181,7 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Vendors</Text>
+                <Text style={{fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Vendors</Text>
               </View>
             ),
             headerTitleStyle: {
@@ -209,7 +211,7 @@ function App() {
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 22 ,color:'black'}}>Subcontract Summary</Text>
+                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Subcontract Summary</Text>
               </View>
             ),
             headerTitleStyle: {

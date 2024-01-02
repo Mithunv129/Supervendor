@@ -245,7 +245,7 @@ export function Vendors_Body(): JSX.Element {
         <View style={styles.ButtonView}>
           <View style={styles.Button1}>
             <Button onPress={() => {}} labelStyle={styles.saveAndExit}>
-              save & Exit
+              Save & Exit
             </Button>
           </View>
           <View style={styles.Button2}>
@@ -253,7 +253,7 @@ export function Vendors_Body(): JSX.Element {
               onPress={NavigateToNextPage}
               labelStyle={styles.openForBids}>
               {/* <Button  labelStyle={styles.openForBids}> */}
-              continue
+              Continue
             </Button>
           </View>
         </View>
