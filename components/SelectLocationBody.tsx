@@ -167,12 +167,12 @@ const Select_Location_Body = () => {
   //   }
   useEffect(() => {
     navigation.setOptions({
-      headerTitleStyle: {
+      headerTitleStyle: {      
         marginLeft: wp((160 / width) * 100)
       },
       headerTitle: () => (
         <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-          <Text style={{  fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Select Locations ({count})</Text>
+          <Text style={{  fontSize: 20 ,color:'#101840',fontWeight:'600',lineHeight:28}}>Select Locations ({count})</Text>
         </View>
       ),
     });

@@ -176,6 +176,7 @@ import SvgImageLock from '../assets/lock';
 import SvgImageNewJob from '../assets/svgCard';
 import SvgNote from '../assets/SvgNote';
 import SvgNote2 from '../assets/SvgNote';
+import Tick from '../assets/Tick';
 import {useNavigation} from '@react-navigation/native';
 import {Avatar, Button, Card, Title} from 'react-native-paper';
 import {
@@ -190,10 +191,10 @@ export function Vendors_Body(): JSX.Element {
     navigation.navigate('SubContact_Summary');
   };
   const [actions, setAction] = useState([
-    {text: 'All available vendors', key: '1', borderColor: '#F3F5F9'},
-    {text: 'My preferred vendors', key: '2', borderColor: '#F3F5F9'},
-    {text: 'Search for vendors', key: '3', borderColor: '#F3F5F9'},
-    {text: 'Invite vendors I know to ARK', key: '4', borderColor: '#F3F5F9'},
+    {text: 'All available vendors', key: '1', borderColor: '#F3F5F9',selected:false},
+    {text: 'My preferred vendors', key: '2', borderColor: '#F3F5F9',selected:false},
+    {text: 'Search for vendors', key: '3', borderColor: '#F3F5F9',selected:false},
+    {text: 'Invite vendors I know to ARK', key: '4', borderColor: '#F3F5F9',selected:false},
   ]);
   const handlePress = (key: string) => {
     const updatedActions = [...actions];
@@ -202,6 +203,8 @@ export function Vendors_Body(): JSX.Element {
     if (selectedItem) {
       selectedItem.borderColor =
         selectedItem.borderColor === '#F3F5F9' ? '#3366FF' : '#F3F5F9';
+        selectedItem.selected = !selectedItem.selected;
+        
     }
 
     setAction(updatedActions);
@@ -231,6 +234,11 @@ export function Vendors_Body(): JSX.Element {
               key={item.key}
               style={[styles.Box, {borderColor: item.borderColor}]}>
               <Text style={styles.Text}>{item.text}</Text>
+              {item.selected && (
+              <Text style={{position: 'absolute', right: 10, color: 'black',paddingTop:'5.5%'}}>
+                <Tick/>
+              </Text>
+            )}
             </View>
           </TouchableOpacity>
         );
