@@ -227,7 +227,6 @@ const style = StyleSheet.create({
     fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
-   // fontWeight: 'bold',
    fontWeight:"700",
     lineHeight: 20,
     textAlignVertical: 'center',

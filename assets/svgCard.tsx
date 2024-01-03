@@ -1,19 +1,25 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 
-function SvgComponent(props:any) {
+function SvgComponent(props) {
   return (
     <Svg
-      width={30}
-      height={30}
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
       viewBox="0 0 24 24"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <Path
-        d="M19.812 6H4.188C3.533 6 3 6.547 3 7.218v9.564C3 17.454 3.533 18 4.188 18h15.624c.655 0 1.188-.546 1.188-1.218V7.218C21 6.547 20.467 6 19.812 6zm.154 10.782c0 .087-.069.158-.154.158H4.187a.157.157 0 01-.154-.158v-5.194h15.933v5.194zm0-6.254H4.033V9.74h15.933v.788zm0-1.847H4.033V7.218c0-.087.07-.158.155-.158h15.624c.085 0 .154.07.154.158V8.68z"
-        fill="#101840"
+        d="M2 9a5 5 0 015-5h10a5 5 0 015 5v6a5 5 0 01-5 5H7a5 5 0 01-5-5V9z"
+        fill="#fff"
+      />
+      <Path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7 6h10a3 3 0 013 3H4a3 3 0 013-3zm-3 5v4a3 3 0 003 3h10a3 3 0 003-3v-4H4zm18-1V9a5 5 0 00-5-5H7a5 5 0 00-5 5v6a5 5 0 005 5h10a5 5 0 005-5v-5zM7 14a1 1 0 100 2h3a1 1 0 100-2H7z"
+        fill="#000"
       />
     </Svg>
   )

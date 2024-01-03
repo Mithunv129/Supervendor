@@ -11,6 +11,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SvgChat from './assets/SvgChat';
 import BackArrow from './assets/BackArrow';
+import SubContractIcon from "./assets/CreateSubContractHeaderIcon"
 const {width, height, scale} = Dimensions.get('window');
 import {
   widthPercentageToDP as wp,
@@ -20,8 +21,9 @@ import {
 const Stack = createNativeStackNavigator();
 const CreateSubcontractHeader = () => {
   return (
-    <View>
-      <Text style={style.headerRightContainer1}>1/3</Text>
+    <View style={style.headerRightContainer1}>
+      {/* <Text style={style.headerRightContainer1}>1/3</Text> */}
+      <SubContractIcon/>
     </View>
   );
 };
@@ -50,29 +52,37 @@ function App() {
             headerShown: false, // Hide the header for the "home" screen
           }}
         />
+      
         <Stack.Screen
           name="Daily_Cleaning"
           component={DailyCleaning}
           options={({ navigation }) => ({
             title: 'Daily general clea...',
             headerStyle: {
-              backgroundColor: '#F3F5F9',
+              backgroundColor: 'white',
             },
             headerTitle: () => (
-              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Daily general clea...</Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100), marginTop:hp((16/height)*100),marginBottom:hp((17/height)*100)}}>
+                <Text style={{    color: '#0F1532',
+    //fontFamily: 'Manrope',
+    fontSize: 20,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    lineHeight: 28,
+    letterSpacing: 0.15,}}>Daily general cleaning</Text>
               </View>
             ),
             headerTitleStyle: {
               fontSize: 22,
             },
-
+            
             headerRight: () => (
-              <View
-                style={[
-                  style.headerRightContainer,
-                  {marginRight: wp((10 / width) * 100)},
-                ]}>
+              <View style={{
+                ...style.headerRightContainer,
+                marginRight: wp((10 / width) * 100),
+                marginBottom: hp((16 / height) * 100),
+                marginTop: hp((16 / height) * 100),
+              }}>
                 <SvgChat />
               </View>
             ),
@@ -91,6 +101,7 @@ function App() {
             headerShadowVisible: false,
           })}
         />
+        
         <Stack.Screen
           name="Create_SubContract"
           component={CreateSubContract}
@@ -147,11 +158,17 @@ function App() {
           options={({ navigation }) => ({
             title: 'Create Subcontract',
             headerStyle: {
-              backgroundColor: '#F3F5F9',
+              backgroundColor: 'white',
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Create Subcontract</Text>
+                <Text style={{ color: '#0F1532',
+    //fontFamily: 'Manrope',
+    fontSize: 20,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    lineHeight: 28,
+    letterSpacing: 0.15,}}>Create Subcontract</Text>
               </View>
             ),
             headerTitleStyle: {

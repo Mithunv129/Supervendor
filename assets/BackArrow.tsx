@@ -1,24 +1,24 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 
-function BackArrow(props:any) {
+function SvgComponent(props:any) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       width={24}
-      height={25}
-      viewBox="0 0 24 25"
+      height={24}
+      viewBox="0 0 24 24"
       fill="none"
       {...props}
     >
       <Path
-        d="M12.2 19.479l-7-6.831 7-6.83M18.96 12.716H7.08"
-        stroke="#36F"
-        strokeWidth={2}
-        strokeLinecap="round"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.906 5.281a1 1 0 01.023 1.414L6.764 11h12.64a1 1 0 110 2H6.764l4.165 4.305a1 1 0 01-1.437 1.39l-5.47-5.652a1.5 1.5 0 010-2.086l5.47-5.652a1 1 0 011.414-.024z"
+        fill="#000"
       />
     </Svg>
   )
 }
 
-export default BackArrow
+export default SvgComponent

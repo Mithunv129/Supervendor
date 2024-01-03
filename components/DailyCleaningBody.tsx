@@ -12,7 +12,8 @@ import SvgImageNext from '../assets/svgNext';
 import SvgImageLock from '../assets/lock';
 import SvgImageNewJob from '../assets/svgCard';
 import SvgNote from '../assets/SvgNote';
-import SvgNote2 from '../assets/SvgNote';
+//import SvgNote2 from '../assets/SvgNote';
+import SubContractImage from '../assets/HandShake'
 import {useNavigation} from '@react-navigation/native';
 import {
   widthPercentageToDP as wp,
@@ -27,7 +28,7 @@ const componentMap = {
   SvgImageLock: (props: {size: number}) => <SvgImageLock {...props} />,
   SvgImageNewJob: (props: {size: number}) => <SvgImageNewJob {...props} />,
   SvgNote: (props: {size: number}) => <SvgNote {...props} />,
-  SvgNote2: (props: {size: number}) => <SvgNote2 {...props} />,
+  SubContractImage: (props: {size: number}) => <SubContractImage {...props} />,
 
  
 };
@@ -42,7 +43,7 @@ export function DailyCleaning(): JSX.Element {
     {name: 'SvgImageAssignTeam', text: 'Assign Teams', key: '2'},
     {name: 'SvgImageNewJob', text: 'Issue new job card', key: '3'},
     {name: 'SvgNote', text: 'Pre-shift checklist', key: '4'},
-    {name: 'SvgNote2', text: 'Subcontract part of the job', key: '5'},
+    {name: 'SubContractImage', text: 'Subcontract part of the job', key: '5'},
   ]);
   return (
     <View style={styles.container}>
@@ -50,7 +51,7 @@ export function DailyCleaning(): JSX.Element {
         const SvgComponent = componentMap[item.name];
         return (
           <TouchableOpacity
-            onPress={item.name == 'SvgNote2' ? NavigateToNextPage : undefined}>
+            onPress={item.name == 'SubContractImage' ? NavigateToNextPage : undefined}>
             <View key={item.key} style={styles.actionContainer}>
               <View style={styles.rowContainer}>
                 <SvgComponent size={200} />
@@ -71,7 +72,7 @@ export function DailyCleaning(): JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F3F5F9',
+    // backgroundColor: '#FFEDBF',
   },
   rowContainer: {
     flexDirection: 'row',
@@ -83,28 +84,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: '5%',
     flexDirection: 'row',
-    borderRadius: 12,
+    borderRadius: 16,
     borderWidth: 1,
-    borderColor: 'rgba(51, 102, 255, 0.30)',
+    borderColor: 'white',
     backgroundColor: '#FFF',
-    shadowColor: 'rgba(51, 102, 255, 0.12)',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    elevation: 2,
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
 
   text: {
-    width: wp(50),
-    color: '#000',
-    fontFamily: 'Manrope',
-    fontSize: hp(1.7),
-    fontStyle: 'normal',
-    fontWeight: '400',
-    lineHeight: 20,
-
-    paddingTop: hp((5 / height) * 100),
+   width: wp(50),
+ 
     paddingLeft: wp((16 / width) * 100),
+    color: '#0F1532',
+   // fontFamily: 'Manrope-NoLigatures',
+    fontSize: hp(1.75),
+    fontStyle: 'normal',
+    fontWeight: '600',
+    lineHeight: 22,
+    letterSpacing: 0.25,
   },
   nextIcon: {
     marginLeft: hp((20 / height) * 100),
