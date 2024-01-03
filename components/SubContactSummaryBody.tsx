@@ -103,7 +103,7 @@ function SubContact_Summary_Body() {
               /> */}
               <Text
                 style={{
-                  color: 'red',
+                  color: '#0F1532',
                   fontSize: hp(1.9),
                   fontStyle: 'normal',
                   fontWeight: '500',
@@ -143,7 +143,7 @@ function SubContact_Summary_Body() {
           <View style={style.Button2}>
             <Button onPress={NavigateToNextPage} labelStyle={style.openForBids}>
               {/* <Button  labelStyle={styles.openForBids}> */}
-              Continue
+              Open for bids
             </Button>
           </View>
         </View>
@@ -158,8 +158,10 @@ function SubContact_Summary_Body() {
 }
 const style = StyleSheet.create({
   container: {
-    backgroundColor: '#F3F5F9',
+   // backgroundColor: '#F3F5F9',
     height: hp(100),
+    
+    
   },
   card: {
     backgroundColor: '#FFF',
@@ -169,6 +171,12 @@ const style = StyleSheet.create({
     // height:'47%',
     paddingBottom: hp((36 / height) * 100),
     borderRadius: 16,
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
+    
   },
   selectVendorsView: {
     display: 'flex',
@@ -190,14 +198,13 @@ const style = StyleSheet.create({
     marginTop: hp((10 / height) * 100),
   },
   selectVendorsText: {
-    color: '#474D66',
-    fontFamily: 'Manrope',
-    fontSize: hp(2),
+    color: '#101840',
+    //fontFamily: 'Manrope',
+    fontSize: hp(2.1),
     fontStyle: 'normal',
-    fontWeight: '400',
+    fontWeight: '600',
     lineHeight: 20,
     letterSpacing: 0.4,
-    opacity: 0.8,
     paddingLeft: 2,
   },
   facilitiestext: {
@@ -215,6 +222,11 @@ const style = StyleSheet.create({
     marginTop: hp((17 / height) * 100),
     height: hp(8),
     borderRadius: 16,
+      shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
 
   checkboxText: {
@@ -298,7 +310,18 @@ const style = StyleSheet.create({
     color: 'black',
   },
   subcontractText: {
-    paddingTop: '2%',
+    //paddingTop: '2%',
+    height: hp((53 / height) * 100),
+
+    marginTop:15,
+    justifyContent:"center",
+    paddingTop:8,
+    paddingBottom:8,
+    paddingLeft:8, 
+    borderColor:'#D9D4C5',
+    borderWidth:1,
+    borderRadius:16,
+   
   },
   MultiCon: {
     paddingTop: hp((20 / height) * 100),
@@ -318,7 +341,7 @@ const style = StyleSheet.create({
     justifyContent: 'space-around',
   },
   saveAndExit: {
-    color: '#36F',
+    color: '#0B30B2',
 
     fontFamily: 'Lato',
     fontSize: hp(2),
@@ -332,15 +355,19 @@ const style = StyleSheet.create({
     fontSize: hp(2),
     fontStyle: 'normal',
     paddingTop: hp((2 / height) * 100),
-
     fontWeight: '500',
     lineHeight: 24,
     letterSpacing: 0.15,
+    elevation:4,
+    shadowOffset: { width: 5, height: 3 },
+  shadowColor: '#003CBE4D', 
+  shadowOpacity: 0.5, 
+  shadowRadius: 5,
   },
   Button1: {
     width: wp(40),
     height: hp(7),
-    borderColor: '#36F',
+    borderColor: '#0B30B2',
     borderWidth: 1,
     backgroundColor: '#FFF',
     borderRadius: 12,
@@ -350,10 +377,15 @@ const style = StyleSheet.create({
   Button2: {
     width: wp(40),
     height: hp(7),
-    backgroundColor: '#36F',
+    backgroundColor: '#0B30B2',
     borderRadius: 12,
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation:5,
   },
 });
 export default SubContact_Summary_Body;

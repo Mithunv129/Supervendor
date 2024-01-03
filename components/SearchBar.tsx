@@ -26,14 +26,22 @@ function Search() {
 const style = StyleSheet.create({
   container: {
     marginTop: hp((28 / height) * 100),
+    
   },
   inputContainer: {
     borderRadius: 14,
     padding: '1.4%',
     borderWidth: 1,
     height: hp(7),
-    borderColor: 'rgba(51, 102, 255, 0.5)',
+    borderColor: '#FFF',
     backgroundColor: '#FFF',
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
+    
+    
   },
 });
 

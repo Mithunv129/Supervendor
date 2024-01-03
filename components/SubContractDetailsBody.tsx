@@ -22,8 +22,8 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import {KeyboardAvoidingView} from 'react-native';
 import {Platform} from 'react-native';
-import DeleteIcon from '../assets/DeleteIcon'
-import PencilIcon from '../assets/PencilIcon'
+import DeleteIcon from '../assets/DeleteIcon';
+import PencilIcon from '../assets/PencilIcon';
 import PlusSymbol from '../assets/Plus';
 function SubContract_Details_Body() {
   const navigation: any = useNavigation();
@@ -54,7 +54,7 @@ function SubContract_Details_Body() {
         name: loc,
         subcontractname: subcontract,
       });
-      
+
       const response = await axios.post(API_BASE_URL + '/users', json, {
         headers: {Accept: '*/*', 'Content-Type': 'application/json'},
       });
@@ -66,22 +66,22 @@ function SubContract_Details_Body() {
   return (
     // <KeyboardAvoidingView
     //   behavior={Platform.OS === 'ios' ? 'padding' : 'height'} enabled>
-      <KeyboardAvoidingView
-    behavior={Platform.OS === 'ios' ? 'padding' : 'height'} enabled>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      enabled>
       <ScrollView style={{flexGrow: 1, display: 'flex'}}>
-        <View style={style.container}>  
-        <View style={style.content}>
-              <Text style={style.checkboxText}>Subcontract 1</Text>
-              <DeleteIcon/>
-              
-        </View> 
-        
-        <View style={style.card}>
+        <View style={style.container}>
+          <View style={style.content}>
+            <Text style={style.checkboxText}>Subcontract 1</Text>
+            <DeleteIcon />
+          </View>
+
+          <View style={style.card}>
             <View style={style.content1}>
-             <View style={style.FacilityContainer}>
-              <Text style={style.content1Text}>Facilities</Text>
-              <PencilIcon/>
-             </View>
+              <View style={style.FacilityContainer}>
+                <Text style={style.content1Text}>Facilities</Text>
+                <PencilIcon />
+              </View>
               <View style={style.locationsContainer}>
                 {locations.length > 0 ? (
                   locations.map((location, index) => (
@@ -102,46 +102,44 @@ function SubContract_Details_Body() {
                     onChangeText={text => setSubcontractName(text)}
                   /> */}
                   <TextInput
-                style={style.Input}
-                underlineColorAndroid="transparent"
-                onChangeText={text => setSubcontractName(text)}
-              />
+                    style={style.Input}
+                    underlineColorAndroid="transparent"
+                    onChangeText={text => setSubcontractName(text)}
+                  />
                 </View>
               </View>
             </View>
           </View>
           <View style={style.card1}>
-   
-
             <View style={style.MultiCon}>
-              <Text style={style.MultiConText}>
-                 Add new contract
-              </Text>
+              <Text style={style.MultiConText}>Add new contract</Text>
             </View>
           </View>
           <View
-        style={{
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'flex-end',
-          marginBottom: hp((100 / height) * 100),
-        }}>
-        <View style={style.ButtonView}>
-          <View style={style.Button1}>
-            <Button onPress={() => {}} labelStyle={style.saveAndExit}>
-              Save & Exit
-            </Button>
+            style={{
+              display: 'flex',
+              flex: 1,
+              justifyContent: 'flex-end',
+              marginBottom: hp((100 / height) * 100),
+            }}>
+            <View style={style.ButtonView}>
+              <View style={style.Button1}>
+                <Button onPress={() => {}} labelStyle={style.saveAndExit}>
+                  Save & Exit
+                </Button>
+              </View>
+              <View style={style.Button2}>
+                <Button
+                  onPress={() => {
+                    NavigateToNextPage(), handleAddLocation();
+                  }}
+                  labelStyle={style.openForBids}>
+                  {/* <Button  labelStyle={styles.openForBids}> */}
+                  Continue
+                </Button>
+              </View>
+            </View>
           </View>
-          <View style={style.Button2}>
-            <Button
-              onPress={NavigateToNextPage}
-              labelStyle={style.openForBids}>
-              {/* <Button  labelStyle={styles.openForBids}> */}
-              Continue
-            </Button>
-          </View>
-        </View>
-      </View>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -149,7 +147,7 @@ function SubContract_Details_Body() {
 }
 const style = StyleSheet.create({
   container: {
-   // backgroundColor: '#F3F5F9',
+    // backgroundColor: '#F3F5F9',
     height: hp(100),
   },
   card: {
@@ -157,11 +155,12 @@ const style = StyleSheet.create({
     marginTop: hp((-4 / height) * 100),
     paddingBottom: hp((36 / height) * 100),
     borderRadius: 16,
-    elevation: 5,
     shadowColor: '#3A2A00',
     shadowOffset: { width: 0, height: 16 },
     shadowOpacity: 0.12,
     shadowRadius: 20,
+    elevation: 5,
+    marginRight:2,
   },
   card1: {
     backgroundColor: '#FFF',
@@ -169,15 +168,14 @@ const style = StyleSheet.create({
     marginTop: hp((24 / height) * 100),
     height: hp(8),
     borderRadius: 16,
-    borderWidth:1,
-    borderColor:"#36F",
-    borderStyle:"dashed",
+    borderWidth: 1,
+    borderColor: '#36F',
+    borderStyle: 'dashed',
     elevation: 5,
     shadowColor: '#3A2A00',
-    shadowOffset: { width: 0, height: 16 },
+    shadowOffset: {width: 0, height: 16},
     shadowOpacity: 0.12,
     shadowRadius: 20,
-
   },
 
   checkboxText: {
@@ -187,19 +185,19 @@ const style = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     lineHeight: 20,
-    marginTop: hp((17/ height) * 100),
+    marginTop: hp((17 / height) * 100),
   },
   content: {
     marginLeft: '1%',
     paddingTop: hp((20 / height) * 100),
     paddingBottom: hp((24 / height) * 100),
     flexDirection: 'row',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   FacilityContainer: {
     flexDirection: 'row',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   Button: {
@@ -226,7 +224,7 @@ const style = StyleSheet.create({
     marginTop: hp((3 / height) * 100),
   },
   subcontract: {
-    color:'#292F4D',
+    color: '#292F4D',
     fontFamily: 'Manrope',
     fontSize: 16,
     fontStyle: 'normal',
@@ -237,22 +235,22 @@ const style = StyleSheet.create({
     marginTop: hp((24 / height) * 100),
   },
   Input: {
-  //   borderRadius: 14,
-  //   borderWidth: 1,
-  //   borderColor: '#EEE',
-  //   height: hp((53 / height) * 100),
-  //   paddingLeft: wp((12 / width) * 100),
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginVertical: hp((4 / height) * 100),
-  //   alignSelf: 'stretch',
-  //  // color: '#0F1532',
-  //   // fontSize:hp(1.9),
-  //   // fontStyle: 'normal',
-  //   // fontWeight: '500',
-  //   // lineHeight: 22,
-  //   // letterSpacing: 0.25,
-  borderRadius: 12,
+    //   borderRadius: 14,
+    //   borderWidth: 1,
+    //   borderColor: '#EEE',
+    //   height: hp((53 / height) * 100),
+    //   paddingLeft: wp((12 / width) * 100),
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   marginVertical: hp((4 / height) * 100),
+    //   alignSelf: 'stretch',
+    color: '#0F1532',
+    fontSize: hp(1.9),
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: 22,
+    letterSpacing: 0.25,
+    borderRadius: 12,
     borderWidth: 1,
     borderColor: '#EEE',
     height: hp((53 / height) * 100),
@@ -261,20 +259,18 @@ const style = StyleSheet.create({
     alignItems: 'center',
     marginVertical: hp((4 / height) * 100),
     alignSelf: 'stretch',
-    color: 'black',
   },
   subcontractText: {
-     paddingTop: '2%',
+    paddingTop: '2%',
   },
   MultiCon: {
     paddingTop: hp((20 / height) * 100),
     flexDirection: 'row',
-    justifyContent:'center',
-    paddingRight:'10%',
-   
+    justifyContent: 'center',
+    paddingRight: '10%',
   },
   MultiConText: {
-    color: '#36F',
+    color: '#0B30B2',
     fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
@@ -283,13 +279,10 @@ const style = StyleSheet.create({
     paddingTop: hp((6 / height) * 100),
     marginLeft: wp((6 / width) * 100),
     letterSpacing: 0.2,
-
   },
   ButtonView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-
-
   },
   buttonLabel: {
     color: 'white',
@@ -301,7 +294,7 @@ const style = StyleSheet.create({
     letterSpacing: 0.15,
   },
   content1Text: {
-    color:'#292F4D',
+    color: '#292F4D',
     fontFamily: 'Manrope',
     fontSize: 16,
     fontStyle: 'normal',
@@ -309,15 +302,14 @@ const style = StyleSheet.create({
     lineHeight: 20,
     letterSpacing: 0.4,
     opacity: 0.8,
-    
   },
   locationsContainer: {
     marginTop: hp((10 / height) * 100),
   },
   locationText: {
     color: '#292F4D',
-   //  fontFamily: 'Manrope',
-    fontSize:hp(1.9),
+    //  fontFamily: 'Manrope',
+    fontSize: hp(1.9),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 22,
@@ -326,24 +318,33 @@ const style = StyleSheet.create({
   Button1: {
     width: wp(40),
     height: hp(7),
-    borderColor: '#36F',
+    borderColor: '#0B30B2',
     borderWidth: 1,
     backgroundColor: '#FFF',
     borderRadius: 12,
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
+    
+    
   },
   Button2: {
     width: wp(40),
     height: hp(7),
-   
-    backgroundColor: '#36F',
+
+    backgroundColor: '#0B30B2',
     borderRadius: 12,
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation:5,
+
+    
   },
-   saveAndExit: {
-    color: '#36F',
+  saveAndExit: {
+    color: '#0B30B2',
 
     fontFamily: 'Lato',
     fontSize: hp(2),
@@ -352,14 +353,18 @@ const style = StyleSheet.create({
     letterSpacing: 0.15,
   },
   openForBids: {
+    
     color: 'white',
     fontFamily: 'Lato',
     fontSize: hp(2),
-    paddingTop:hp((2 / height) * 100),
+    paddingTop: hp((2 / height) * 100),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 24,
     letterSpacing: 0.15,
+    borderRadius: 12,
+    
+    
   },
 });
 export default SubContract_Details_Body;

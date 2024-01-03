@@ -103,7 +103,7 @@ function Home_Body() {
       <View>
         <View style={style.buttonContainer}>
           <View>
-            <Button style={style.buttonOne} labelStyle={{color: '#36F'}}>
+            <Button style={style.buttonOne} labelStyle={{color: '#0B30B2'}}>
               <Text style={style.buttonOneText}>View details</Text>
             </Button>
           </View>
@@ -126,6 +126,12 @@ const style = StyleSheet.create({
     borderRadius: 14,
     position: 'relative',
     marginTop: hp((16 / height) * 100),
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
+
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -141,7 +147,7 @@ const style = StyleSheet.create({
   buttonOne: {
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#36F',
+    borderColor: '#0B30B2',
     backgroundColor: '#FFF',
     paddingTop:hp((4 / height) * 100),
     paddingBottom: hp((4 / height) * 100),
@@ -152,7 +158,7 @@ const style = StyleSheet.create({
     borderRadius: 16,
     borderWidth: 1,
     borderColor: '#36F',
-    backgroundColor: '#36F',
+    backgroundColor: '#0B30B2',
     paddingTop:hp((4 / height) * 100),
     paddingBottom: hp((4 / height) * 100),
     paddingLeft: wp((12 / width) * 100),

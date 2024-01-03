@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
  
     paddingLeft: wp((16 / width) * 100),
     color: '#0F1532',
-   // fontFamily: 'Manrope-NoLigatures',
+    //fontFamily: 'Manrope',
     fontSize: hp(1.75),
     fontStyle: 'normal',
     fontWeight: '600',

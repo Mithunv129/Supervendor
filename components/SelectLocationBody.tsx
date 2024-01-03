@@ -161,7 +161,7 @@ const Item = ({
   };
 
   return (
-    <TouchableOpacity onPress={handlePress}>
+    <TouchableOpacity onPress={handlePress} activeOpacity={1}>
       <View style={[styles.item, {borderColor}]}>
         <View>
           <Image source={image} style={styles.image} />
@@ -274,9 +274,7 @@ const styles = StyleSheet.create({
     //width: 312,
     height: 100,
     backgroundColor: '#FFF',
-    shadowColor: 'rgba(51, 102, 255, 0.12)',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 1,
+   
     borderRadius: 16,
     //marginLeft: '3%',
     marginBottom: 20,
@@ -287,7 +285,12 @@ const styles = StyleSheet.create({
     //paddingTop: 16,
     paddingLeft: 16,
     //justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
   title: {
     color: '#0F1532',
@@ -328,9 +331,16 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#0B30B2',
    // padding: '2%',
-    borderRadius: 16,
+    borderRadius: 12,
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    
+    elevation: 5,
     marginBottom:"-6%",
-    paddingTop:"5%"
+    paddingTop:"5%",
+   
   },
   buttontext: {
     color: 'white',

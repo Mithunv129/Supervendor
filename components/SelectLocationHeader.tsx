@@ -55,14 +55,6 @@ const styles = StyleSheet.create({
     paddingBottom: 13,
     // backgroundColor:'#FFF',
     width: 312,
-    backgroundColor: '', 
-    shadowColor: 'rgba(84, 75, 42, 0.20)',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.2,
-    shadowRadius: 16,
-    elevation: 4,
-
-
     fontFamily: 'Manrope',
     fontSize:18,
     fontStyle: 'normal',
@@ -70,6 +62,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     letterSpacing: 0.15,
     opacity:0.5,
+    
   },
   text: {
     color: '#101840',
@@ -94,6 +87,11 @@ const styles = StyleSheet.create({
     borderColor: '#FFF',
     backgroundColor: '#FFF',
     width:hp(41.6),
+    shadowColor: '#3A2A00',
+    shadowOffset: { width: 0, height: 16 },
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
     
   },
 });

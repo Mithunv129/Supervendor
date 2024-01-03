@@ -128,7 +128,7 @@ export function Vendors_Body(): JSX.Element {
 
 const styles = StyleSheet.create({
   container1: {
-    backgroundColor: '#F3F5F9',
+   // backgroundColor: '#F3F5F9',
     height: hp(100),
   },
 
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   },
   Text: {
     color: '#101840',
-    fontFamily: 'Manrope',
+   // fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
     fontWeight: '400',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   saveAndExit: {
-    color: '#36F',
+    color: '#0B30B2',
 
     fontFamily: 'Lato',
     fontSize: hp(2),
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   Button1: {
     width: wp(40),
     height: hp(7),
-    borderColor: '#36F',
+    borderColor: '#0B30B2',
     borderWidth: 1,
     backgroundColor: '#FFF',
     borderRadius: 12,
@@ -192,10 +192,16 @@ const styles = StyleSheet.create({
     width: wp(40),
     height: hp(7),
 
-    backgroundColor: '#36F',
+    backgroundColor: '#0B30B2',
     borderRadius: 12,
     paddingTop: hp((6 / height) * 100),
     paddingBottom: hp((6 / height) * 100),
+    elevation:4,
+    shadowOffset: { width: 5, height: 3 },
+  shadowColor: 'black', 
+  shadowOpacity: 0.5, 
+  shadowRadius: 5,
+    
   },
 });
 export default Vendors_Body;

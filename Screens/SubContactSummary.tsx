@@ -5,11 +5,20 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { Dimensions } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 const {width, height, scale} = Dimensions.get('window');
 
 function SubContactSummary(){
     return(
-      <View style={{flex: 1, backgroundColor: '#F3F5F9'}}>
+      <View style={{flex: 1}}>
+           <LinearGradient
+      colors={['#FFEDBF','#FFFFFF','#FFEDBF','#FFFFFF']}
+      locations={[0, 0.2, 0.4, .7]}
+ 
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={{ flex: 1 }}
+    >
       <View
         style={{
           marginRight: hp((24 / height) * 100),
@@ -17,6 +26,7 @@ function SubContactSummary(){
         }}>
        <SubContactSummaryBody />
       </View>
+      </LinearGradient>
     </View>
     )
 }
