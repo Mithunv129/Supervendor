@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import {
   View,
@@ -22,10 +21,30 @@ export function Vendors_Body(): JSX.Element {
     navigation.navigate('SubContact_Summary');
   };
   const [actions, setAction] = useState([
-    {text: 'All available vendors', key: '1', borderColor: '#F3F5F9',selected:false},
-    {text: 'My preferred vendors', key: '2', borderColor: '#F3F5F9',selected:false},
-    {text: 'Search for vendors', key: '3', borderColor: '#F3F5F9',selected:false},
-    {text: 'Invite vendors I know to ARK', key: '4', borderColor: '#F3F5F9',selected:false},
+    {
+      text: 'All available vendors',
+      key: '1',
+      borderColor: '#F3F5F9',
+      selected: false,
+    },
+    {
+      text: 'My preferred vendors',
+      key: '2',
+      borderColor: '#F3F5F9',
+      selected: false,
+    },
+    {
+      text: 'Search for vendors',
+      key: '3',
+      borderColor: '#F3F5F9',
+      selected: false,
+    },
+    {
+      text: 'Invite vendors I know to ARK',
+      key: '4',
+      borderColor: '#F3F5F9',
+      selected: false,
+    },
   ]);
   const handlePress = (key: string) => {
     const updatedActions = [...actions];
@@ -33,9 +52,8 @@ export function Vendors_Body(): JSX.Element {
     const selectedItem = updatedActions.find(item => item.key === key);
     if (selectedItem) {
       selectedItem.borderColor =
-        selectedItem.borderColor === '#F3F5F9' ? '#3366FF' : '#F3F5F9';
-        selectedItem.selected = !selectedItem.selected;
-        
+        selectedItem.borderColor === '#D9A521' ? '#FFF' : '#D9A521';
+      selectedItem.selected = !selectedItem.selected;
     }
 
     setAction(updatedActions);
@@ -55,21 +73,28 @@ export function Vendors_Body(): JSX.Element {
           How would you like to select vendors to {'\n'}bid for the job ?{' '}
         </Text>
       </View>
-                           
+
       {actions.map(item => {
         return (
           <TouchableOpacity
             onPress={() => handlePress(item.key)}
-            key={item.key}>
+            key={item.key}
+            activeOpacity={1}>
             <View
               key={item.key}
               style={[styles.Box, {borderColor: item.borderColor}]}>
               <Text style={styles.Text}>{item.text}</Text>
               {item.selected && (
-              <Text style={{position: 'absolute', right: 10, color: 'black',paddingTop:'5%'}}>
-                <Tick/>
-              </Text>
-            )}
+                <Text
+                  style={{
+                    position: 'absolute',
+                    right: 10,
+                    color: 'black',
+                    paddingTop: '5%',
+                  }}>
+                  <Tick />
+                </Text>
+              )}
             </View>
           </TouchableOpacity>
         );
@@ -106,20 +131,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#F3F5F9',
     height: hp(100),
   },
-  
+
   Box: {
     paddingTop: hp((18 / height) * 100),
     paddingBottom: hp((20 / height) * 100),
     marginTop: hp((16 / height) * 100),
-    borderRadius: 12,
+    borderRadius: 16,
     borderWidth: 1,
     backgroundColor: '#FFF',
-    shadowColor: 'rgba(51, 102, 255, 0.12)',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    elevation: 2,
     paddingLeft: wp((20 / width) * 100),
+    shadowColor: '#3A2A00',
+    shadowOffset: {width: 0, height: 16},
+    shadowOpacity: 0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
   Text: {
     color: '#101840',
@@ -133,8 +158,6 @@ const styles = StyleSheet.create({
   ButtonView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-
-
   },
   saveAndExit: {
     color: '#36F',
@@ -149,7 +172,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontFamily: 'Lato',
     fontSize: hp(2),
-    paddingTop:hp((2 / height) * 100),
+    paddingTop: hp((2 / height) * 100),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 24,
@@ -168,7 +191,7 @@ const styles = StyleSheet.create({
   Button2: {
     width: wp(40),
     height: hp(7),
-   
+
     backgroundColor: '#36F',
     borderRadius: 12,
     paddingTop: hp((6 / height) * 100),

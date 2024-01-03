@@ -51,7 +51,7 @@ export function DailyCleaning(): JSX.Element {
         const SvgComponent = componentMap[item.name];
         return (
           <TouchableOpacity
-            onPress={item.name == 'SubContractImage' ? NavigateToNextPage : undefined}>
+            onPress={item.name == 'SubContractImage' ? NavigateToNextPage : undefined} activeOpacity={2}>
             <View key={item.key} style={styles.actionContainer}>
               <View style={styles.rowContainer}>
                 <SvgComponent size={200} />

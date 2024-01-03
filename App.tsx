@@ -113,7 +113,7 @@ function App() {
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
                 {/* <Text style={{ fontSize: 22 ,color:'black'}}>Create Subcontract</Text> */}
-                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Create Subcontract</Text>
+                <Text style={{ fontSize: 20 ,color:'#101840',fontWeight:'600',lineHeight:28}}>Create Subcontract</Text>
 
               </View>
             ),
@@ -194,11 +194,17 @@ function App() {
           options={({ navigation }) => ({
             title: 'Vendors',
             headerStyle: {
-              backgroundColor: '#F3F5F9',
+              backgroundColor: '#FFF',
             },
             headerTitle: () => (
               <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: wp((16 / width) * 100) }}>
-                <Text style={{fontSize: 20 ,color:'#101840',fontWeight:600,lineHeight:28}}>Vendors</Text>
+                <Text style={{color: '#0F1532',
+    //fontFamily: 'Manrope',
+    fontSize: 20,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    lineHeight: 28,
+    letterSpacing: 0.15,}}>Vendors</Text>
               </View>
             ),
             headerTitleStyle: {

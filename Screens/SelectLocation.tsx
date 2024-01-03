@@ -23,6 +23,9 @@ const styles = StyleSheet.create(
       },
       body:{
         flex:3.5,
+        marginLeft:24,
+        marginRight:24,
+
         //marginBottom:'100%',
         
       }

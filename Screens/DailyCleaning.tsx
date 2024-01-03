@@ -12,6 +12,8 @@
 // export default DailyGeneralCleaning;
 import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
 import DailyCleaning from '../components/DailyCleaningBody';
+import LinearGradient from 'react-native-linear-gradient';
+
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -20,7 +22,14 @@ const {width, height, scale} = Dimensions.get('window');
 
 function DailyGeneralCleaning() {
   return (
+   
     <View style={{flex: 1, backgroundColor: '#F3F5F9'}}>
+       <LinearGradient
+     colors={['#FFEDBF', '#FFFFFF']}
+     start={{ x: 0, y: 0 }}
+     end={{ x: 1, y: 1 }}
+     style={{ flex: 1 }}
+   >
       <View
         style={{
           marginRight: hp((24 / height) * 100),
@@ -28,7 +37,10 @@ function DailyGeneralCleaning() {
         }}>
         <DailyCleaning />
       </View>
+      </LinearGradient>
+
     </View>
+
   );
 }
 
