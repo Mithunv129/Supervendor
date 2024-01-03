@@ -22,7 +22,9 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import {KeyboardAvoidingView} from 'react-native';
 import {Platform} from 'react-native';
-
+import DeleteIcon from '../assets/DeleteIcon'
+import PencilIcon from '../assets/PencilIcon'
+import PlusSymbol from '../assets/Plus';
 function SubContract_Details_Body() {
   const navigation: any = useNavigation();
   const route = useRoute();
@@ -65,16 +67,19 @@ function SubContract_Details_Body() {
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView style={{flexGrow: 1, display: 'flex'}}>
-        <View style={style.container}>   
-          <View style={style.card}>
-            <View style={style.content}>
-              <Check1 />
-              <Text style={style.checkboxText}>Create Subcontract</Text>
-            </View>
-            <View style={style.divider1}></View>
+        <View style={style.container}>  
+        <View style={style.content}>
+              <Text style={style.checkboxText}>Subcontract 1</Text>
+              <DeleteIcon/>
+              
+        </View> 
+        
+        <View style={style.card}>
             <View style={style.content1}>
+             <View style={style.FacilityContainer}>
               <Text style={style.content1Text}>Facilities</Text>
-
+              <PencilIcon/>
+             </View>
               <View style={style.locationsContainer}>
                 {locations.length > 0 ? (
                   locations.map((location, index) => (
@@ -101,29 +106,35 @@ function SubContract_Details_Body() {
 
           <View style={style.card1}>
             <View style={style.MultiCon}>
-              <Check2 />
+              <PlusSymbol/>
               <Text style={style.MultiConText}>
-                Create multiple subcontracts
+                 Add new contract
               </Text>
             </View>
           </View>
           <View
-            style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'flex-end',
-              marginBottom: hp((100 / height) * 100),
-            }}>
-            <View style={style.ButtonView}>
-              <Button
-                onPress={() => {
-                  NavigateToNextPage(), handleAddLocation();
-                }}
-                labelStyle={style.buttonLabel}>
-                Continue
-              </Button>
-            </View>
+        style={{
+          display: 'flex',
+          flex: 1,
+          justifyContent: 'flex-end',
+          marginBottom: hp((100 / height) * 100),
+        }}>
+        <View style={style.ButtonView}>
+          <View style={style.Button1}>
+            <Button onPress={() => {}} labelStyle={style.saveAndExit}>
+              Save & Exit
+            </Button>
           </View>
+          <View style={style.Button2}>
+            <Button
+              onPress={NavigateToNextPage}
+              labelStyle={style.openForBids}>
+              {/* <Button  labelStyle={styles.openForBids}> */}
+              Continue
+            </Button>
+          </View>
+        </View>
+      </View>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -136,9 +147,9 @@ const style = StyleSheet.create({
   },
   card: {
     backgroundColor: '#FFF',
-    marginTop: hp((24 / height) * 100),
+    marginTop: hp((-4 / height) * 100),
     paddingBottom: hp((36 / height) * 100),
-    borderRadius: 10,
+    borderRadius: 16,
   },
   card1: {
     backgroundColor: '#FFF',
@@ -150,24 +161,25 @@ const style = StyleSheet.create({
 
   checkboxText: {
     color: '#101840',
-    fontFamily: 'Manrope',
+    //fontFamily: 'Manrope',
     fontSize: hp(2.1),
     fontStyle: 'normal',
     fontWeight: '600',
     lineHeight: 20,
-    marginTop: hp((3 / height) * 100),
-    marginLeft: wp((8 / width) * 100),
+    marginTop: hp((17/ height) * 100),
   },
   content: {
-    marginLeft: '4%',
+    marginLeft: '1%',
     paddingTop: hp((20 / height) * 100),
     paddingBottom: hp((24 / height) * 100),
     flexDirection: 'row',
+    justifyContent:'space-between',
     alignItems: 'center',
   },
-  divider1: {
-    borderBottomWidth: 5,
-    borderBottomColor: '#EEE',
+  FacilityContainer: {
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
   },
   Button: {
     borderRadius: 12,
@@ -177,7 +189,7 @@ const style = StyleSheet.create({
     borderColor: '#EEEEEE',
   },
   content1: {
-    paddingTop: hp((32 / height) * 100),
+    paddingTop: hp((16 / height) * 100),
     paddingLeft: wp((20 / width) * 100),
     paddingRight: wp((20 / width) * 100),
   },
@@ -193,9 +205,9 @@ const style = StyleSheet.create({
     marginTop: hp((3 / height) * 100),
   },
   subcontract: {
-    color: '#474D66',
+    color:'#292F4D',
     fontFamily: 'Manrope',
-    fontSize: hp(1.8),
+    fontSize: 16,
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 20,
@@ -204,7 +216,7 @@ const style = StyleSheet.create({
     marginTop: hp((24 / height) * 100),
   },
   Input: {
-    borderRadius: 12,
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: '#EEE',
     height: hp((53 / height) * 100),
@@ -213,32 +225,38 @@ const style = StyleSheet.create({
     alignItems: 'center',
     marginVertical: hp((4 / height) * 100),
     alignSelf: 'stretch',
-    color: 'black',
+    color: '#0F1532',
+    fontSize:hp(1.9),
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: 22,
+    letterSpacing: 0.25,
   },
   subcontractText: {
-    paddingTop: '2%',
+     paddingTop: '2%',
   },
   MultiCon: {
     paddingTop: hp((20 / height) * 100),
     flexDirection: 'row',
+    justifyContent:'center',
+    paddingRight:'10%'
   },
   MultiConText: {
-    color: '#101840',
+    color: '#36F',
     fontFamily: 'Manrope',
     fontSize: hp(2),
     fontStyle: 'normal',
-    fontWeight: '600',
+    fontWeight: '700',
     lineHeight: 20,
     paddingTop: hp((6 / height) * 100),
     marginLeft: wp((6 / width) * 100),
+    letterSpacing: 0.2,
   },
   ButtonView: {
-    backgroundColor: '#36F',
-    borderRadius: 10,
-    paddingTop: hp((12 / height) * 100),
-    paddingBottom: hp((12 / height) * 100),
-    paddingRight: wp((24 / width) * 100),
-    paddingLeft: wp((24 / width) * 100),
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+
+
   },
   buttonLabel: {
     color: 'white',
@@ -250,25 +268,65 @@ const style = StyleSheet.create({
     letterSpacing: 0.15,
   },
   content1Text: {
-    color: '#474D66',
+    color:'#292F4D',
     fontFamily: 'Manrope',
     fontSize: 16,
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 20,
     letterSpacing: 0.4,
+    opacity: 0.8,
+    
   },
   locationsContainer: {
     marginTop: hp((10 / height) * 100),
   },
   locationText: {
-    color: '#101840',
-    fontFamily: 'Manrope',
-    fontSize:hp(1.7 ),
+    color: '#292F4D',
+   //  fontFamily: 'Manrope',
+    fontSize:hp(1.9),
     fontStyle: 'normal',
     fontWeight: '500',
     lineHeight: 22,
     letterSpacing: 0.25,
+  },
+  Button1: {
+    width: wp(40),
+    height: hp(7),
+    borderColor: '#36F',
+    borderWidth: 1,
+    backgroundColor: '#FFF',
+    borderRadius: 12,
+    paddingTop: hp((6 / height) * 100),
+    paddingBottom: hp((6 / height) * 100),
+  },
+  Button2: {
+    width: wp(40),
+    height: hp(7),
+   
+    backgroundColor: '#36F',
+    borderRadius: 12,
+    paddingTop: hp((6 / height) * 100),
+    paddingBottom: hp((6 / height) * 100),
+  },
+   saveAndExit: {
+    color: '#36F',
+
+    fontFamily: 'Lato',
+    fontSize: hp(2),
+    fontWeight: '500',
+    lineHeight: 24,
+    letterSpacing: 0.15,
+  },
+  openForBids: {
+    color: 'white',
+    fontFamily: 'Lato',
+    fontSize: hp(2),
+    paddingTop:hp((2 / height) * 100),
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: 24,
+    letterSpacing: 0.15,
   },
 });
 export default SubContract_Details_Body;
